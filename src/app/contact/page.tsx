@@ -174,7 +174,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-navy mb-1">Email</h4>
-                      <p className="text-charcoal">info@familyofficealpha.com</p>
+                      <p className="text-charcoal">info@foalpha.com</p>
                       <p className="text-charcoal text-sm">We respond within 24 hours</p>
                     </div>
                   </div>
@@ -196,8 +196,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-navy mb-1">Office</h4>
-                      <p className="text-charcoal">123 Wall Street, Suite 4500</p>
-                      <p className="text-charcoal">New York, NY 10005</p>
+                      <p className="text-charcoal">27 West 60th Street</p>
+                      <p className="text-charcoal">New York, NY 10023</p>
                     </div>
                   </div>
                   
@@ -223,7 +223,7 @@ export default function Contact() {
                   <div className="text-center">
                     <MapPin className="text-gold mx-auto mb-2" size={48} />
                     <p className="text-charcoal">Interactive Map</p>
-                    <p className="text-charcoal text-sm">123 Wall Street, New York, NY</p>
+                    <p className="text-charcoal text-sm">27 West 60th Street, New York, NY</p>
                   </div>
                 </div>
               </div>

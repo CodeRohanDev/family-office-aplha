@@ -8,31 +8,31 @@ const ServicePreview = () => {
   const services = [
     {
       icon: Shield,
-      title: 'Cybersecurity Advisory',
-      description: 'Advanced threat protection and security architecture designed specifically for high-net-worth families.',
-      features: ['24/7 Monitoring', 'Threat Intelligence', 'Incident Response'],
-      highlight: 'Most Popular'
+      title: 'Cybersecurity Assessment',
+      description: 'Expert cybersecurity evaluation with former SEC and Treasury advisors, including compliance with SEC regulations.',
+      features: ['Expert consultation', 'Diagnostic questionnaire', 'Compliance review'],
+      highlight: 'Expert Led'
     },
     {
-      icon: TrendingUp,
-      title: 'Wealth Management',
-      description: 'Strategic investment planning and portfolio optimization with institutional-grade execution.',
-      features: ['Asset Allocation', 'Risk Management', 'Performance Analytics'],
+      icon: Lock,
+      title: 'Cybersecurity Strengthening',
+      description: 'Comprehensive security solutions based on CIS Controls Framework with 24/7 monitoring and protection.',
+      features: ['24/7 monitoring', 'Endpoint protection', 'Firewall monitoring'],
       highlight: null
     },
     {
-      icon: Users,
-      title: 'Family Office Setup',
-      description: 'Complete family office establishment with governance frameworks and operational excellence.',
-      features: ['Governance Design', 'Staff Recruitment', 'Process Optimization'],
+      icon: FileText,
+      title: 'Family Office Operations',
+      description: 'Professional accounting, bill pay, and administrative services to streamline your family office operations.',
+      features: ['Accounting services', 'Bill payment', 'Vendor selection'],
       highlight: null
     }
   ];
 
   const additionalServices = [
-    { icon: Lock, title: 'Privacy Protection', description: 'Digital privacy and confidentiality solutions' },
-    { icon: BarChart3, title: 'Risk Management', description: 'Comprehensive risk assessment and mitigation' },
-    { icon: FileText, title: 'Compliance Advisory', description: 'Regulatory compliance and governance frameworks' }
+    { icon: BarChart3, title: 'Technology Implementation', description: 'Strategic technology solutions and system integration' },
+    { icon: TrendingUp, title: 'Custom Reporting', description: 'Tailored reporting and analytics solutions' },
+    { icon: Users, title: 'Digital Identity Protection', description: 'Advanced privacy and identity security solutions' }
   ];
 
   return (

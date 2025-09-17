@@ -3,71 +3,66 @@ import { Calendar, Users, Globe, Award, ExternalLink } from 'lucide-react';
 export default function Activities() {
   const upcomingEvents = [
     {
-      date: '2024-03-15',
-      title: 'Cybersecurity in Family Offices: 2024 Threat Landscape',
-      type: 'Webinar',
-      description: 'Join our experts as they discuss emerging cybersecurity threats and protection strategies for family offices.',
+      date: '2025-01-15',
+      title: 'Cybersecurity MasterClass: Compliance & Technology',
+      type: 'MasterClass',
+      description: 'Comprehensive cybersecurity training covering compliance requirements, technology implementation, and reputation management for family offices.',
       time: '2:00 PM EST',
-      registration: '#'
+      registration: 'https://www.foalpha.com/videos'
     },
     {
-      date: '2024-04-10',
-      title: 'Wealth Preservation Strategies in Volatile Markets',
-      type: 'Workshop',
-      description: 'Interactive workshop covering advanced wealth preservation techniques and risk management strategies.',
-      time: '10:00 AM EST',
-      registration: '#'
-    },
-    {
-      date: '2024-05-20',
-      title: 'Family Office Technology Summit 2024',
-      type: 'Conference',
-      description: 'Annual summit bringing together family office professionals to discuss technology trends and innovations.',
-      time: 'Full Day Event',
-      registration: '#'
+      date: '2025-02-20',
+      title: 'Athletes as Investors: Building Generational Wealth',
+      type: 'Webinar',
+      description: 'Focused on generational wealth and investment strategies specifically designed for professional athletes.',
+      time: '3:00 PM EST',
+      registration: 'https://www.foalpha.com/videos'
     }
   ];
 
   const pastEvents = [
     {
-      date: '2024-01-25',
-      title: 'Digital Asset Security for High-Net-Worth Families',
-      type: 'Webinar',
-      attendees: 150,
-      recording: '#'
+      date: '2024-09-30',
+      title: 'Family Office Alpha for Athletes',
+      type: 'Partnership Event',
+      description: 'Partnership with 73 Holdings focusing on wealth management for professional athletes.',
+      attendees: 120,
+      recording: 'https://www.foalpha.com/videos'
     },
     {
-      date: '2023-11-15',
-      title: 'Regulatory Compliance in Multi-Jurisdictional Family Offices',
-      type: 'Workshop',
-      attendees: 75,
-      recording: '#'
-    },
-    {
-      date: '2023-09-30',
-      title: 'ESG Investing: Aligning Values with Returns',
-      type: 'Panel Discussion',
+      date: '2024-10-20',
+      title: 'Family Office List MasterClass: Athletes & Family Offices',
+      type: 'MasterClass',
+      description: 'Hosted by Danielle Patterson, featuring Julia Valentine & Garrick Jones discussing family office strategies for athletes.',
       attendees: 200,
-      recording: '#'
+      recording: 'https://www.foalpha.com/videos'
     }
   ];
 
   const partnerships = [
     {
-      name: 'Global Family Office Institute',
-      description: 'Strategic partnership providing research and educational resources for family office professionals.',
+      name: '73 Holdings',
+      description: 'Strategic partnership focusing on family office services for professional athletes, led by former NFL/CFL player Garrick Jones.',
+      type: 'Strategic Partnership'
+    },
+    {
+      name: 'Colley Intelligence',
+      description: 'Advisory firm partnership for investigations, disputes, and risk management services.',
+      type: 'Advisory Partnership'
+    },
+    {
+      name: 'DiSC Personality Style Workshops',
+      description: 'Collaboration to improve self-awareness and communication through personality assessment workshops.',
       type: 'Educational Partnership'
-    },
-    {
-      name: 'Cybersecurity Alliance',
-      description: 'Collaboration with leading cybersecurity firms to develop industry-specific security frameworks.',
-      type: 'Technology Partnership'
-    },
-    {
-      name: 'Wealth Management Association',
-      description: 'Active membership and thought leadership in advancing wealth management best practices.',
-      type: 'Industry Association'
     }
+  ];
+
+  const keyTopics = [
+    'Wealth management challenges for athletes',
+    'Psychology of money & family patterns',
+    'Goal setting and roadmaps to success',
+    'Why and how to set up a family office',
+    'Importance of cybersecurity for wealth protection'
   ];
 
   return (
@@ -187,14 +182,41 @@ export default function Activities() {
         </div>
       </section>
 
+      {/* Key Topics */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-playfair text-4xl font-bold text-navy mb-4">Key Topics We Cover</h2>
+            <div className="section-divider mx-auto mb-8"></div>
+            <p className="text-xl text-charcoal/80 max-w-3xl mx-auto">
+              Our events and webinars cover the most critical topics facing family offices today.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {keyTopics.map((topic, index) => (
+              <div
+                key={index}
+                className="bg-offWhite p-6 rounded-xl hover:shadow-lg transition-all duration-300 group hover:-translate-y-1"
+              >
+                <div className="flex items-start">
+                  <div className="w-2 h-2 bg-gold rounded-full mt-2 mr-4 flex-shrink-0 group-hover:bg-navy transition-colors"></div>
+                  <span className="text-charcoal font-medium group-hover:text-navy transition-colors">{topic}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Partnerships */}
       <section className="py-20 bg-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-playfair text-4xl font-bold text-white mb-4">Strategic Partnerships</h2>
+            <h2 className="font-playfair text-4xl font-bold text-white mb-4">Featured Partnerships</h2>
             <div className="section-divider mx-auto"></div>
             <p className="text-offWhite max-w-2xl mx-auto">
-              Collaborating with industry leaders to advance family office excellence and innovation
+              Collaborating with industry leaders to provide comprehensive solutions for our clients
             </p>
           </div>
           

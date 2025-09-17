@@ -42,7 +42,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Mail size={16} className="mr-2 text-gold" />
-                <span className="text-offWhite">info@familyofficealpha.com</span>
+                <span className="text-offWhite">info@foalpha.com</span>
               </div>
               <div className="flex items-center">
                 <Phone size={16} className="mr-2 text-gold" />
@@ -50,7 +50,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <MapPin size={16} className="mr-2 text-gold" />
-                <span className="text-offWhite">New York, NY</span>
+                <span className="text-offWhite">27 West 60th Street, NY</span>
               </div>
             </div>
           </div>

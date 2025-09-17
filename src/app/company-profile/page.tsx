@@ -56,8 +56,9 @@ export default function CompanyProfile() {
             </h1>
             <div className="w-20 h-1 bg-gold mx-auto mb-8"></div>
             <p className="text-xl md:text-2xl text-offWhite/90 max-w-4xl mx-auto leading-relaxed">
-              Pioneering the integration of wealth management and cybersecurity for 
-              ultra-high-net-worth families seeking institutional-grade excellence.
+              Our Management Team has seen economic and interest rate fluctuations, the tech bubble, 
+              terrorist attacks, the Great Financial Crisis, superstorms, zero interest rates, and the pandemic. 
+              We offer solutions that instill confidence.
             </p>
           </div>
         </div>

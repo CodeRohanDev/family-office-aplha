@@ -4,39 +4,39 @@ export default function Services() {
   const services = [
     {
       icon: Shield,
-      title: 'Cybersecurity Advisory',
-      description: 'Comprehensive security assessments, threat analysis, and strategic cybersecurity planning tailored for family offices.',
-      features: ['Security Risk Assessment', 'Incident Response Planning', 'Security Architecture Design', 'Compliance Auditing']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Wealth Management',
-      description: 'Strategic investment planning and portfolio management with a focus on long-term wealth preservation and growth.',
-      features: ['Investment Strategy', 'Portfolio Management', 'Risk Assessment', 'Performance Monitoring']
-    },
-    {
-      icon: Users,
-      title: 'Family Office Setup',
-      description: 'Complete family office establishment including governance structures, operational frameworks, and staff recruitment.',
-      features: ['Governance Design', 'Operational Setup', 'Staff Recruitment', 'Policy Development']
+      title: 'Cybersecurity Assessment',
+      description: 'Initial meeting with Christopher Hetner (Former Senior Cybersecurity Advisor to the SEC Chair, Former US Treasury Senior Cyber Advisor & G-7 Cyber Expert).',
+      features: ['Walkthrough diagnostic questionnaire', 'SEC cybersecurity regulations compliance', 'Results discussion and next steps', 'Expert consultation']
     },
     {
       icon: Lock,
-      title: 'Privacy Protection',
-      description: 'Advanced privacy solutions including digital asset protection, identity security, and confidentiality frameworks.',
-      features: ['Digital Privacy', 'Identity Protection', 'Secure Communications', 'Data Encryption']
-    },
-    {
-      icon: BarChart3,
-      title: 'Risk Management',
-      description: 'Comprehensive risk assessment and mitigation strategies covering financial, operational, and reputational risks.',
-      features: ['Risk Assessment', 'Mitigation Strategies', 'Insurance Planning', 'Crisis Management']
+      title: 'Cybersecurity Strengthening',
+      description: 'Based on CIS Controls Framework with comprehensive monitoring and protection solutions.',
+      features: ['Endpoint monitoring (mouse movements, location data)', '24/7 monitoring', 'Basic firewall monitoring', 'Network context analysis']
     },
     {
       icon: FileText,
-      title: 'Compliance Advisory',
-      description: 'Regulatory compliance guidance and governance framework implementation for complex family office structures.',
-      features: ['Regulatory Compliance', 'Governance Frameworks', 'Reporting Systems', 'Audit Support']
+      title: 'Accounting and Bill Pay',
+      description: 'Professional accounting services and bill payment management to streamline your administrative tasks.',
+      features: ['Monthly accounting', 'Bill payment services', 'Financial reporting', 'Expense management']
+    },
+    {
+      icon: Users,
+      title: 'Vendor Selection',
+      description: 'Expert guidance in selecting and managing vendors for your family office operations.',
+      features: ['Vendor evaluation', 'Due diligence', 'Contract negotiation', 'Performance monitoring']
+    },
+    {
+      icon: BarChart3,
+      title: 'Technology Implementation',
+      description: 'Strategic technology solutions and implementation for modern family office operations.',
+      features: ['Technology assessment', 'System integration', 'Digital transformation', 'Training and support']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Custom Reporting',
+      description: 'Tailored reporting solutions to provide insights into your family office performance and security.',
+      features: ['Custom dashboards', 'Performance analytics', 'Security reports', 'Compliance documentation']
     }
   ];
 
@@ -94,8 +94,115 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Service Packages */}
       <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-playfair text-4xl font-bold text-navy mb-4">Cybersecurity Service Packages</h2>
+            <div className="section-divider mx-auto mb-8"></div>
+            <p className="text-xl text-charcoal/80 max-w-3xl mx-auto">
+              We work with family offices and RIAs to identify the right cybersecurity package for your needs.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Basic Package */}
+            <div className="bg-offWhite p-8 rounded-xl border-2 border-gold/20 hover:border-gold/40 transition-colors duration-300">
+              <div className="text-center mb-8">
+                <h3 className="font-playfair text-2xl font-bold text-navy mb-2">Basic Package</h3>
+                <p className="text-charcoal/70">Essential cybersecurity protection</p>
+              </div>
+              
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start">
+                  <CheckCircle className="text-gold mr-3 mt-1 flex-shrink-0" size={16} />
+                  <span className="text-charcoal">Endpoint agent</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-gold mr-3 mt-1 flex-shrink-0" size={16} />
+                  <span className="text-charcoal">24/7 monitoring</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-gold mr-3 mt-1 flex-shrink-0" size={16} />
+                  <span className="text-charcoal">Basic firewall monitoring</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-gold mr-3 mt-1 flex-shrink-0" size={16} />
+                  <span className="text-charcoal">Advanced analytics and reporting</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-gold mr-3 mt-1 flex-shrink-0" size={16} />
+                  <span className="text-charcoal">Enhanced identity and access management</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-gold mr-3 mt-1 flex-shrink-0" size={16} />
+                  <span className="text-charcoal">Access certifications and reviews</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-gold mr-3 mt-1 flex-shrink-0" size={16} />
+                  <span className="text-charcoal">Customized incident response plan</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="text-gold mr-3 mt-1 flex-shrink-0" size={16} />
+                  <span className="text-charcoal">vCISO (Virtual Chief Information Security Officer)</span>
+                </li>
+              </ul>
+              
+              <a
+                href="/contact"
+                className="block w-full bg-gold text-navy text-center px-6 py-3 rounded-lg font-semibold hover:bg-navy hover:text-white transition-all duration-300"
+              >
+                Get Basic Package
+              </a>
+            </div>
+
+            {/* Comprehensive Package */}
+            <div className="bg-navy p-8 rounded-xl border-2 border-navy relative overflow-hidden">
+              <div className="absolute top-4 right-4 bg-gold text-navy px-3 py-1 rounded-full text-sm font-semibold">
+                Most Popular
+              </div>
+              
+              <div className="text-center mb-8">
+                <h3 className="font-playfair text-2xl font-bold text-white mb-2">Comprehensive Package</h3>
+                <p className="text-offWhite/80">Complete cybersecurity solution</p>
+              </div>
+              
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start">
+                  <CheckCircle className="text-gold mr-3 mt-1 flex-shrink-0" size={16} />
+                  <span className="text-white font-medium">All Basic Package features</span>
+                </li>
+                <li className="flex items-start">
+                  <Star className="text-gold mr-3 mt-1 flex-shrink-0" size={16} />
+                  <span className="text-white">Privileged identity management</span>
+                </li>
+                <li className="flex items-start">
+                  <Star className="text-gold mr-3 mt-1 flex-shrink-0" size={16} />
+                  <span className="text-white">Incident response management</span>
+                </li>
+                <li className="flex items-start">
+                  <Star className="text-gold mr-3 mt-1 flex-shrink-0" size={16} />
+                  <span className="text-white">Penetration Testing</span>
+                </li>
+                <li className="flex items-start">
+                  <Star className="text-gold mr-3 mt-1 flex-shrink-0" size={16} />
+                  <span className="text-white">Threat hunting</span>
+                </li>
+              </ul>
+              
+              <a
+                href="/contact"
+                className="block w-full bg-gold text-navy text-center px-6 py-3 rounded-lg font-semibold hover:bg-white transition-all duration-300"
+              >
+                Get Comprehensive Package
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-offWhite">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-playfair text-4xl font-bold text-navy mb-4">Why Choose Family Office Alpha</h2>
@@ -103,27 +210,27 @@ export default function Services() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <Zap className="text-gold mx-auto mb-4" size={64} />
-              <h3 className="font-playfair text-xl font-semibold text-navy mb-4">Innovative Solutions</h3>
+            <div className="text-center p-6 bg-white rounded-xl shadow-md">
+              <Shield className="text-gold mx-auto mb-4" size={64} />
+              <h3 className="font-playfair text-xl font-semibold text-navy mb-4">Expert Leadership</h3>
               <p className="text-charcoal">
-                Cutting-edge technology and methodologies to address modern family office challenges.
+                Led by former SEC and Treasury cybersecurity advisors with decades of experience.
               </p>
             </div>
             
-            <div className="text-center p-6">
-              <Globe className="text-gold mx-auto mb-4" size={64} />
-              <h3 className="font-playfair text-xl font-semibold text-navy mb-4">Global Expertise</h3>
+            <div className="text-center p-6 bg-white rounded-xl shadow-md">
+              <Clock className="text-gold mx-auto mb-4" size={64} />
+              <h3 className="font-playfair text-xl font-semibold text-navy mb-4">24/7 Protection</h3>
               <p className="text-charcoal">
-                International experience serving families across multiple jurisdictions and markets.
+                Round-the-clock monitoring and support to ensure your assets are always protected.
               </p>
             </div>
             
-            <div className="text-center p-6">
+            <div className="text-center p-6 bg-white rounded-xl shadow-md">
               <Award className="text-gold mx-auto mb-4" size={64} />
-              <h3 className="font-playfair text-xl font-semibold text-navy mb-4">Proven Track Record</h3>
+              <h3 className="font-playfair text-xl font-semibold text-navy mb-4">Proven Results</h3>
               <p className="text-charcoal">
-                15+ years of excellence with a 99.9% client satisfaction rate and zero security breaches.
+                Trusted by family offices and RIAs with a track record of zero security breaches.
               </p>
             </div>
           </div>

@@ -65,15 +65,15 @@ const AboutPreview = () => {
               </h3>
               
               <p className="text-lg text-charcoal/80 mb-6 leading-relaxed">
-                Founded in 2008 by industry veterans from Goldman Sachs and leading cybersecurity firms, 
-                Family Office Alpha emerged from a simple recognition: ultra-high-net-worth families 
-                needed a new kind of advisory firm.
+                We are a team with decades of finance, accounting, and technology experience. Our founders 
+                have managed their own family office, worked for one of the top 5 family offices globally 
+                by AUM, and implemented banking and technology solutions.
               </p>
               
               <p className="text-lg text-charcoal/80 mb-8 leading-relaxed">
-                We pioneered the integration of traditional wealth management with advanced cybersecurity, 
-                creating a comprehensive approach that protects both financial assets and digital privacy 
-                in an increasingly connected world.
+                We simplify tasks like bill pay and accounting, freeing family offices to focus on 
+                investments and long-term wealth management. Our Management Team has navigated economic 
+                fluctuations, tech bubbles, financial crises, and global pandemics.
               </p>
 
               <div className="space-y-4 mb-8">

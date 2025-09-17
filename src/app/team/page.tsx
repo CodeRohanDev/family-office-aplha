@@ -3,53 +3,61 @@ import { Linkedin, Mail, Award, Users, Globe, CheckCircle, Star, Building } from
 export default function Team() {
   const teamMembers = [
     {
-      name: 'Michael Richardson',
-      title: 'Founder & CEO',
-      bio: 'Former Goldman Sachs Managing Director with 20+ years in wealth management and family office services. Expert in strategic planning and client relationship management.',
+      name: 'Julia Valentine',
+      title: 'CEO',
+      bio: 'FinTech Advisor with leadership experience at JPMorgan Chase, D. E. Shaw, and Mousse Partners. Expertise in technology & operations assessment, cloud strategy & cybersecurity, digital transformation, ML/AI, RPA, blockchain, data management & governance. MBA – Columbia University; B.Sc. Economics & Finance – NYU Stern, magna cum laude.',
+      image: '/team/julia.jpg',
+      linkedin: 'https://www.alphamille.com/julia-valentine-bio',
+      email: 'julia@foalpha.com'
+    },
+    {
+      name: 'Tracy McWilliams',
+      title: 'Co-Founder',
+      bio: 'Investor and board member, co-founder of Digital Evolution Institute. Founder & CEO of Inspire Global Ventures (IGV). General Partner of the IGV Transformative Technology Fund.',
+      image: '/team/tracy.jpg',
+      linkedin: 'https://www.digitalevolution.institute/team',
+      email: 'tracy@foalpha.com'
+    },
+    {
+      name: 'Michael Laido',
+      title: 'CFO',
+      bio: 'Experienced financial executive with expertise in family office operations, financial planning, and strategic management.',
       image: '/team/michael.jpg',
       linkedin: '#',
-      email: 'michael@familyofficealpha.com'
+      email: 'michael@foalpha.com'
     },
     {
-      name: 'Sarah Chen',
-      title: 'Chief Security Officer',
-      bio: 'Cybersecurity veteran with extensive experience at NSA and leading tech companies. Specializes in threat assessment and security architecture for high-net-worth clients.',
-      image: '/team/sarah.jpg',
+      name: 'Phoebe Van Tran',
+      title: 'Managing Partner',
+      bio: 'Strategic leader with extensive experience in wealth management and family office operations.',
+      image: '/team/phoebe.jpg',
       linkedin: '#',
-      email: 'sarah@familyofficealpha.com'
+      email: 'phoebe@foalpha.com'
     },
     {
-      name: 'David Thompson',
-      title: 'Managing Director, Wealth Advisory',
-      bio: 'CFA charterholder with 15+ years at top-tier investment firms. Leads our investment strategy and portfolio management services for family offices.',
-      image: '/team/david.jpg',
+      name: 'Holly Nelson',
+      title: 'Strategic Director',
+      bio: 'Strategic planning and operations expert focused on family office excellence and client service.',
+      image: '/team/holly.jpg',
       linkedin: '#',
-      email: 'david@familyofficealpha.com'
+      email: 'holly@foalpha.com'
     },
     {
-      name: 'Elena Rodriguez',
-      title: 'Director of Compliance',
-      bio: 'Former regulatory attorney with deep expertise in family office compliance and governance. Ensures all operations meet the highest regulatory standards.',
-      image: '/team/elena.jpg',
+      name: 'Eva van Basten',
+      title: 'Vice President',
+      bio: 'Senior executive with expertise in client relations and family office management.',
+      image: '/team/eva.jpg',
       linkedin: '#',
-      email: 'elena@familyofficealpha.com'
-    },
-    {
-      name: 'James Park',
-      title: 'Senior Cybersecurity Analyst',
-      bio: 'Certified Ethical Hacker and security consultant with expertise in penetration testing and incident response for financial institutions.',
-      image: '/team/james.jpg',
-      linkedin: '#',
-      email: 'james@familyofficealpha.com'
-    },
-    {
-      name: 'Amanda Foster',
-      title: 'Client Relations Manager',
-      bio: 'Relationship management specialist with a focus on high-net-worth client service. Ensures exceptional client experience and satisfaction.',
-      image: '/team/amanda.jpg',
-      linkedin: '#',
-      email: 'amanda@familyofficealpha.com'
+      email: 'eva@foalpha.com'
     }
+  ];
+
+  const advisors = [
+    { name: 'Grace Cassab', title: 'Advisor' },
+    { name: 'Mike Blogna', title: 'Advisor' },
+    { name: 'Caitlin Panasci', title: 'Advisor' },
+    { name: 'Jenny Trang Nguyen', title: 'Advisor' },
+    { name: 'Brinkley Skye', title: 'Advisor' }
   ];
 
   return (
@@ -119,28 +127,60 @@ export default function Team() {
         </div>
       </section>
 
-      {/* Leadership Philosophy */}
+      {/* Advisors Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-playfair text-4xl font-bold text-navy mb-4">Leadership Philosophy</h2>
+            <h2 className="font-playfair text-4xl font-bold text-navy mb-4">Our Advisory Board</h2>
+            <div className="section-divider mx-auto mb-8"></div>
+            <p className="text-xl text-charcoal/80 max-w-3xl mx-auto">
+              Distinguished advisors providing strategic guidance and industry expertise.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {advisors.map((advisor, index) => (
+              <div
+                key={advisor.name}
+                className="bg-offWhite p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 group hover:-translate-y-1"
+              >
+                <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/30 transition-colors">
+                  <span className="text-gold font-playfair text-xl font-bold">
+                    {advisor.name.split(' ').map(n => n[0]).join('')}
+                  </span>
+                </div>
+                <h3 className="font-playfair text-lg font-semibold text-navy mb-2 group-hover:text-gold transition-colors">
+                  {advisor.name}
+                </h3>
+                <p className="text-charcoal/70 text-sm">{advisor.title}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership Philosophy */}
+      <section className="py-20 bg-offWhite">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-playfair text-4xl font-bold text-navy mb-4">Who We Are</h2>
             <div className="section-divider mx-auto"></div>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h3 className="font-playfair text-2xl font-semibold text-navy mb-6">
-                Experience Meets Innovation
+                Decades of Finance, Accounting, and Technology Experience
               </h3>
               <p className="text-charcoal leading-relaxed mb-6">
-                Our leadership team combines decades of experience in traditional wealth management 
-                with cutting-edge expertise in cybersecurity and digital innovation. This unique 
-                blend allows us to address both time-tested financial principles and modern security challenges.
+                We are a team with decades of finance, accounting, and technology experience. Our founders 
+                have managed their own family office, worked for one of the top 5 family offices globally 
+                by AUM, and implemented banking and technology solutions.
               </p>
               <p className="text-charcoal leading-relaxed">
-                We believe in building long-term relationships based on trust, transparency, and 
-                exceptional service. Our team's diverse backgrounds in finance, technology, and 
-                regulatory compliance ensure comprehensive solutions for every client need.
+                We simplify tasks like bill pay and accounting, freeing family offices to focus on 
+                investments and long-term wealth management. Our expertise spans traditional wealth 
+                management and cutting-edge cybersecurity solutions.
               </p>
             </div>
             
