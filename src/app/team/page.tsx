@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { Linkedin, Mail, X } from 'lucide-react';
-import AnimatedSection from '@/components/AnimatedSection';
 
 // Team Member Card Component
 function TeamMemberCard({ member }: { member: any }) {
@@ -201,19 +200,13 @@ export default function Team() {
       <section className="bg-navy text-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <AnimatedSection animation="fadeIn" duration={800}>
-              <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-2">
-                Our Team
-              </h1>
-            </AnimatedSection>
-            <AnimatedSection animation="scaleIn" delay={200}>
-              <div className="w-16 sm:w-20 h-1 bg-gold mx-auto mb-6 sm:mb-8"></div>
-            </AnimatedSection>
-            <AnimatedSection animation="slideUp" delay={400}>
-              <p className="text-lg sm:text-xl text-offWhite max-w-3xl mx-auto px-4 leading-relaxed">
-                Meet the experienced professionals dedicated to protecting and growing your family's wealth
-              </p>
-            </AnimatedSection>
+            <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-2">
+              Our Team
+            </h1>
+            <div className="w-16 sm:w-20 h-1 bg-gold mx-auto mb-6 sm:mb-8"></div>
+            <p className="text-lg sm:text-xl text-offWhite max-w-3xl mx-auto px-4 leading-relaxed">
+              Meet the experienced professionals dedicated to protecting and growing your family's wealth
+            </p>
           </div>
         </div>
       </section>
@@ -221,10 +214,11 @@ export default function Team() {
       {/* Team Grid */}
       <section className="py-16 sm:py-20 bg-offWhite">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
             {teamMembers.map((member) => (
               <TeamMemberCard key={member.name} member={member} />
             ))}
+          </div>
         </div>
       </section>
 
@@ -398,17 +392,17 @@ export default function Team() {
       </section>
 
       {/* Join Our Team CTA */}
-      <section className="py-16 sm:py-20 bg-offWhite">
+      <section className="py-20 bg-offWhite">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold text-navy mb-4 sm:mb-6 px-4">
+          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-navy mb-6">
             Join Our Team
           </h2>
-          <p className="text-lg sm:text-xl text-charcoal mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+          <p className="text-xl text-charcoal mb-8 max-w-2xl mx-auto">
             We're always looking for exceptional talent to join our growing team of professionals.
           </p>
           <a
             href="/contact"
-            className="bg-gold text-navy px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-navy hover:text-white transition-all duration-300 inline-block text-sm sm:text-base"
+            className="bg-gold text-navy px-8 py-4 rounded-xl font-semibold hover:bg-navy hover:text-white transition-all duration-300 inline-block"
           >
             View Opportunities
           </a>
