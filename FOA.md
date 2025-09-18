@@ -93,7 +93,7 @@ We simplify tasks like bill pay and accounting, freeing family offices to focus 
 ### Julia Valentine – CEO
 FinTech Advisor with leadership experience at JPMorgan Chase, D. E. Shaw, and Mousse Partners.  
 Expertise includes:  
-- Technology & Operations assessment  
+- Technology & Operations assessment
 - Cloud strategy & cybersecurity  
 - Digital transformation, ML/AI, RPA, blockchain  
 - Data management & governance  

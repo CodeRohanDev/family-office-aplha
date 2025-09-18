@@ -4,18 +4,29 @@ export default function Activities() {
   const upcomingEvents = [
     {
       date: '2025-01-15',
-      title: 'Cybersecurity MasterClass: Compliance & Technology',
+      title: 'Cybersecurity MasterClass: ROI, Technology & Governance',
       type: 'MasterClass',
-      description: 'Comprehensive cybersecurity training covering compliance requirements, technology implementation, and reputation management for family offices.',
+      description: 'Comprehensive cybersecurity training covering ROI analysis, technology implementation, governance frameworks, and reputation management for family offices.',
       time: '2:00 PM EST',
+      speakers: ['Julia Valentine', 'Christopher Hetner'],
       registration: 'https://www.foalpha.com/videos'
     },
     {
       date: '2025-02-20',
-      title: 'Athletes as Investors: Building Generational Wealth',
-      type: 'Webinar',
-      description: 'Focused on generational wealth and investment strategies specifically designed for professional athletes.',
+      title: 'Athlete Academy: Wealth Management & Financial Fitness',
+      type: 'Academy Program',
+      description: 'Comprehensive program teaching wealth management, family office creation, and financial fitness specifically designed for professional athletes.',
       time: '3:00 PM EST',
+      speakers: ['Julia Valentine', 'Garrick Jones'],
+      registration: 'https://www.foalpha.com/videos'
+    },
+    {
+      date: '2025-03-15',
+      title: 'Legacy Circle: Life After Sports Preparation',
+      type: 'Workshop',
+      description: 'Helping athletes prepare for life after sports with comprehensive wealth transition and legacy planning strategies.',
+      time: '2:00 PM EST',
+      speakers: ['Garrick Jones', 'Julia Valentine'],
       registration: 'https://www.foalpha.com/videos'
     }
   ];
@@ -25,7 +36,8 @@ export default function Activities() {
       date: '2024-09-30',
       title: 'Family Office Alpha for Athletes',
       type: 'Partnership Event',
-      description: 'Partnership with 73 Holdings focusing on wealth management for professional athletes.',
+      description: 'Partnership with 73 Holdings focusing on wealth management for professional athletes. Featured Garrick Jones (former NFL/CFL player, CEO of 73 Holdings) and Julia Valentine.',
+      speakers: ['Julia Valentine', 'Garrick Jones'],
       attendees: 120,
       recording: 'https://www.foalpha.com/videos'
     },
@@ -33,8 +45,27 @@ export default function Activities() {
       date: '2024-10-20',
       title: 'Family Office List MasterClass: Athletes & Family Offices',
       type: 'MasterClass',
-      description: 'Hosted by Danielle Patterson, featuring Julia Valentine & Garrick Jones discussing family office strategies for athletes.',
+      description: 'Hosted by Danielle Patterson (CEO of Family Office List), featuring Julia Valentine & Garrick Jones discussing comprehensive family office strategies for professional athletes.',
+      speakers: ['Danielle Patterson', 'Julia Valentine', 'Garrick Jones'],
       attendees: 200,
+      recording: 'https://www.foalpha.com/videos'
+    },
+    {
+      date: '2024-09-15',
+      title: 'Cybersecurity Webinar: ROI & Business Continuity',
+      type: 'Webinar',
+      description: 'Deep dive into cybersecurity ROI analysis and how security investments prevent business disruption for family offices.',
+      speakers: ['Julia Valentine', 'Christopher Hetner'],
+      attendees: 150,
+      recording: 'https://www.foalpha.com/videos'
+    },
+    {
+      date: '2024-10-05',
+      title: 'Technology & Governance in Family Offices',
+      type: 'Webinar',
+      description: 'Exploring the intersection of technology implementation and governance frameworks in modern family office operations.',
+      speakers: ['Julia Valentine'],
+      attendees: 180,
       recording: 'https://www.foalpha.com/videos'
     }
   ];
@@ -42,40 +73,60 @@ export default function Activities() {
   const partnerships = [
     {
       name: '73 Holdings',
-      description: 'Strategic partnership focusing on family office services for professional athletes, led by former NFL/CFL player Garrick Jones.',
-      type: 'Strategic Partnership'
+      description: 'Strategic partnership focusing on athlete-focused wealth programs, led by Garrick Jones (former NFL/CFL player). Collaborative programs include wealth management education and family office creation for professional athletes.',
+      type: 'Strategic Partnership',
+      focus: 'Athlete Wealth Management'
     },
     {
       name: 'Colley Intelligence',
-      description: 'Advisory firm partnership for investigations, disputes, and risk management services.',
-      type: 'Advisory Partnership'
+      description: 'Advisory firm partnership specializing in corporate investigations, intelligence gathering, and litigation advisory services for high-net-worth families.',
+      type: 'Advisory Partnership',
+      focus: 'Risk Management & Investigations'
     },
     {
-      name: 'DiSC Personality Style Workshops',
-      description: 'Collaboration to improve self-awareness and communication through personality assessment workshops.',
-      type: 'Educational Partnership'
+      name: 'Family Office List',
+      description: 'Collaboration with Danielle Patterson (CEO) for events and training programs, including MasterClasses and educational content for family office professionals.',
+      type: 'Educational Partnership',
+      focus: 'Events & Training'
+    },
+    {
+      name: 'Digital Evolution Institute',
+      description: 'Partnership tied to Tracy McWilliams (Co-Founder), focusing on digital transformation and technology evolution in family office operations.',
+      type: 'Technology Partnership',
+      focus: 'Digital Innovation'
+    },
+    {
+      name: 'AlphaMille',
+      description: 'Technology Provider Guide partnership, creating comprehensive vendor lists and solutions across 13 categories of family office technology.',
+      type: 'Research Partnership',
+      focus: 'Technology Research'
     }
   ];
 
   const keyTopics = [
-    'Wealth management challenges for athletes',
-    'Psychology of money & family patterns',
-    'Goal setting and roadmaps to success',
-    'Why and how to set up a family office',
-    'Importance of cybersecurity for wealth protection'
+    'Wealth management challenges for athletes and high-net-worth families',
+    'Psychology of money & family patterns across generations',
+    'Goal setting and strategic roadmaps to financial success',
+    'Why and how to set up a family office: governance and operations',
+    'Cybersecurity ROI and business continuity for family offices',
+    'Next-generation wealth transfer ($72 trillion over 25 years)',
+    'Athlete wealth psychology and financial roadmap guidance',
+    'Technology implementation and governance frameworks',
+    'Digital transformation in family office operations',
+    'Legacy planning and life-after-sports preparation'
   ];
 
   return (
-    <div className="pt-16">
+    <div className="pt-14 sm:pt-16 md:pt-20 overflow-x-hidden">
       {/* Hero Section */}
-      <section className="bg-navy text-white py-20">
+      <section className="bg-navy text-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="font-playfair text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-2">
               Activities & Events
             </h1>
-            <div className="section-divider mx-auto mb-8"></div>
-            <p className="text-xl text-offWhite max-w-3xl mx-auto">
+            <div className="w-16 sm:w-20 h-1 bg-gold mx-auto mb-6 sm:mb-8"></div>
+            <p className="text-lg sm:text-xl text-offWhite max-w-3xl mx-auto px-4 leading-relaxed">
               Stay connected with industry insights, educational events, and strategic partnerships
             </p>
           </div>
@@ -83,28 +134,28 @@ export default function Activities() {
       </section>
 
       {/* Upcoming Events */}
-      <section className="py-20 bg-offWhite">
+      <section className="py-16 sm:py-20 bg-offWhite">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-playfair text-4xl font-bold text-navy mb-4">Upcoming Events</h2>
-            <div className="section-divider mx-auto"></div>
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-navy mb-3 sm:mb-4 px-4">Upcoming Events</h2>
+            <div className="w-16 sm:w-20 h-1 bg-gold mx-auto"></div>
           </div>
           
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {upcomingEvents.map((event, index) => (
               <div
                 key={event.title}
-                className="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-all duration-300"
+                className="bg-white rounded-xl shadow-md p-6 sm:p-8 hover:shadow-lg transition-all duration-300"
               >
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 sm:gap-6">
                   <div className="flex-1">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="bg-gold/10 p-3 rounded-lg">
-                        <Calendar className="text-gold" size={24} />
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-4">
+                      <div className="bg-gold/10 p-2.5 sm:p-3 rounded-lg w-fit">
+                        <Calendar className="text-gold" size={20} />
                       </div>
                       <div>
-                        <div className="text-gold font-semibold">{event.type}</div>
-                        <div className="text-charcoal text-sm">
+                        <div className="text-gold font-semibold text-sm sm:text-base">{event.type}</div>
+                        <div className="text-charcoal text-xs sm:text-sm">
                           {new Date(event.date).toLocaleDateString('en-US', { 
                             weekday: 'long', 
                             year: 'numeric', 
@@ -114,20 +165,26 @@ export default function Activities() {
                         </div>
                       </div>
                     </div>
-                    <h3 className="font-playfair text-2xl font-semibold text-navy mb-4">
+                    <h3 className="font-playfair text-xl sm:text-2xl font-semibold text-navy mb-3 sm:mb-4 leading-tight">
                       {event.title}
                     </h3>
-                    <p className="text-charcoal leading-relaxed">
+                    <p className="text-charcoal leading-relaxed mb-3 sm:mb-4 text-sm sm:text-base">
                       {event.description}
                     </p>
+                    {event.speakers && (
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mb-2">
+                        <span className="text-xs sm:text-sm font-medium text-navy">Speakers:</span>
+                        <span className="text-xs sm:text-sm text-charcoal/70">{event.speakers.join(', ')}</span>
+                      </div>
+                    )}
                   </div>
                   <div className="lg:w-auto">
                     <a
                       href={event.registration}
-                      className="bg-gold text-navy px-6 py-3 rounded-xl font-semibold hover:bg-navy hover:text-white transition-all duration-300 inline-flex items-center"
+                      className="bg-gold text-navy px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold hover:bg-navy hover:text-white transition-all duration-300 inline-flex items-center text-sm sm:text-base w-full sm:w-auto justify-center"
                     >
                       Register Now
-                      <ExternalLink className="ml-2" size={16} />
+                      <ExternalLink className="ml-2" size={14} />
                     </a>
                   </div>
                 </div>
@@ -138,40 +195,49 @@ export default function Activities() {
       </section>
 
       {/* Past Events */}
-      <section className="py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-playfair text-4xl font-bold text-navy mb-4">Past Events</h2>
-            <div className="section-divider mx-auto"></div>
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-navy mb-3 sm:mb-4 px-4">Past Events</h2>
+            <div className="w-16 sm:w-20 h-1 bg-gold mx-auto"></div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {pastEvents.map((event, index) => (
               <div
                 key={event.title}
-                className="bg-offWhite rounded-xl p-6 hover:shadow-md transition-all duration-300"
+                className="bg-offWhite rounded-xl p-5 sm:p-6 hover:shadow-md transition-all duration-300"
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-navy/10 p-2 rounded-lg">
-                    <Users className="text-navy" size={20} />
+                <div className="flex items-center gap-3 mb-3 sm:mb-4">
+                  <div className="bg-navy/10 p-2 rounded-lg flex-shrink-0">
+                    <Users className="text-navy" size={18} />
                   </div>
-                  <div>
-                    <div className="text-navy font-semibold text-sm">{event.type}</div>
+                  <div className="min-w-0 flex-1">
+                    <div className="text-navy font-semibold text-xs sm:text-sm">{event.type}</div>
                     <div className="text-charcoal text-xs">
                       {new Date(event.date).toLocaleDateString()}
                     </div>
                   </div>
                 </div>
-                <h3 className="font-playfair text-lg font-semibold text-navy mb-3">
+                <h3 className="font-playfair text-base sm:text-lg font-semibold text-navy mb-2 sm:mb-3 leading-tight">
                   {event.title}
                 </h3>
+                <p className="text-charcoal/70 text-xs sm:text-sm mb-2 sm:mb-3 leading-relaxed">
+                  {event.description}
+                </p>
+                {event.speakers && (
+                  <div className="mb-2 sm:mb-3">
+                    <span className="text-xs font-medium text-navy">Speakers: </span>
+                    <span className="text-xs text-charcoal/70">{event.speakers.join(', ')}</span>
+                  </div>
+                )}
                 <div className="flex items-center justify-between">
-                  <span className="text-charcoal text-sm">
+                  <span className="text-charcoal text-xs sm:text-sm">
                     {event.attendees} attendees
                   </span>
                   <a
                     href={event.recording}
-                    className="text-gold hover:text-navy font-medium text-sm"
+                    className="text-gold hover:text-navy font-medium text-xs sm:text-sm whitespace-nowrap"
                   >
                     View Recording →
                   </a>
@@ -183,25 +249,25 @@ export default function Activities() {
       </section>
 
       {/* Key Topics */}
-      <section className="py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-playfair text-4xl font-bold text-navy mb-4">Key Topics We Cover</h2>
-            <div className="section-divider mx-auto mb-8"></div>
-            <p className="text-xl text-charcoal/80 max-w-3xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-navy mb-3 sm:mb-4 px-4">Key Topics We Cover</h2>
+            <div className="w-16 sm:w-20 h-1 bg-gold mx-auto mb-6 sm:mb-8"></div>
+            <p className="text-lg sm:text-xl text-charcoal/80 max-w-3xl mx-auto px-4">
               Our events and webinars cover the most critical topics facing family offices today.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {keyTopics.map((topic, index) => (
               <div
                 key={index}
-                className="bg-offWhite p-6 rounded-xl hover:shadow-lg transition-all duration-300 group hover:-translate-y-1"
+                className="bg-offWhite p-4 sm:p-6 rounded-xl hover:shadow-lg transition-all duration-300 group hover:-translate-y-1"
               >
                 <div className="flex items-start">
-                  <div className="w-2 h-2 bg-gold rounded-full mt-2 mr-4 flex-shrink-0 group-hover:bg-navy transition-colors"></div>
-                  <span className="text-charcoal font-medium group-hover:text-navy transition-colors">{topic}</span>
+                  <div className="w-2 h-2 bg-gold rounded-full mt-2 mr-3 sm:mr-4 flex-shrink-0 group-hover:bg-navy transition-colors"></div>
+                  <span className="text-charcoal font-medium group-hover:text-navy transition-colors text-sm sm:text-base leading-relaxed">{topic}</span>
                 </div>
               </div>
             ))}
@@ -210,30 +276,33 @@ export default function Activities() {
       </section>
 
       {/* Partnerships */}
-      <section className="py-20 bg-navy">
+      <section className="py-16 sm:py-20 bg-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-playfair text-4xl font-bold text-white mb-4">Featured Partnerships</h2>
-            <div className="section-divider mx-auto"></div>
-            <p className="text-offWhite max-w-2xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-white mb-3 sm:mb-4 px-4">Featured Partnerships</h2>
+            <div className="w-16 sm:w-20 h-1 bg-gold mx-auto mb-6 sm:mb-8"></div>
+            <p className="text-offWhite max-w-2xl mx-auto px-4 text-sm sm:text-base">
               Collaborating with industry leaders to provide comprehensive solutions for our clients
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {partnerships.map((partnership, index) => (
               <div
                 key={partnership.name}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-gold/20"
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-5 sm:p-6 border border-gold/20"
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <Globe className="text-gold" size={24} />
-                  <span className="text-gold text-sm font-medium">{partnership.type}</span>
+                <div className="flex items-center gap-3 mb-3 sm:mb-4">
+                  <Globe className="text-gold flex-shrink-0" size={20} />
+                  <div className="min-w-0 flex-1">
+                    <span className="text-gold text-xs sm:text-sm font-medium block">{partnership.type}</span>
+                    <span className="text-offWhite/70 text-xs">{partnership.focus}</span>
+                  </div>
                 </div>
-                <h3 className="font-playfair text-xl font-semibold text-white mb-4">
+                <h3 className="font-playfair text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4 leading-tight">
                   {partnership.name}
                 </h3>
-                <p className="text-offWhite leading-relaxed">
+                <p className="text-offWhite leading-relaxed text-sm sm:text-base">
                   {partnership.description}
                 </p>
               </div>
@@ -242,22 +311,84 @@ export default function Activities() {
         </div>
       </section>
 
+      {/* Publications & Research */}
+      <section className="py-16 sm:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-navy mb-3 sm:mb-4 px-4">Publications & Research</h2>
+            <div className="w-16 sm:w-20 h-1 bg-gold mx-auto mb-6 sm:mb-8"></div>
+            <p className="text-lg sm:text-xl text-charcoal/80 max-w-3xl mx-auto px-4">
+              Comprehensive research and publications to guide family office technology and strategy decisions.
+            </p>
+          </div>
+          
+          <div className="bg-offWhite rounded-2xl p-6 sm:p-8">
+            <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+              <div>
+                <h3 className="font-playfair text-xl sm:text-2xl font-bold text-navy mb-4 sm:mb-6">Technology Provider Guide</h3>
+                <p className="text-base sm:text-lg text-charcoal/80 mb-4 sm:mb-6 leading-relaxed">
+                  Sponsored by Family Office Alpha and written by AlphaMille, this comprehensive guide defines 
+                  13 categories of family office technology with detailed vendor lists and solutions.
+                </p>
+                <div className="space-y-3 sm:space-y-4">
+                  <div className="flex items-start">
+                    <div className="w-2 h-2 bg-gold rounded-full mt-2 mr-3 sm:mr-4 flex-shrink-0"></div>
+                    <span className="text-charcoal text-sm sm:text-base">13 comprehensive technology categories</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="w-2 h-2 bg-gold rounded-full mt-2 mr-3 sm:mr-4 flex-shrink-0"></div>
+                    <span className="text-charcoal text-sm sm:text-base">Extensive vendor analysis and recommendations</span>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="w-2 h-2 bg-gold rounded-full mt-2 mr-3 sm:mr-4 flex-shrink-0"></div>
+                    <span className="text-charcoal text-sm sm:text-base">Strategic technology implementation guidance</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-navy p-6 sm:p-8 rounded-xl text-white">
+                <h4 className="font-playfair text-lg sm:text-xl font-bold text-gold mb-3 sm:mb-4">Research Categories</h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-xs sm:text-sm">
+                  <div className="space-y-2">
+                    <div>• Portfolio Management</div>
+                    <div>• Risk Management</div>
+                    <div>• Reporting & Analytics</div>
+                    <div>• Document Management</div>
+                    <div>• Communication Tools</div>
+                    <div>• Cybersecurity Solutions</div>
+                    <div>• Compliance Systems</div>
+                  </div>
+                  <div className="space-y-2">
+                    <div>• CRM Platforms</div>
+                    <div>• Accounting Software</div>
+                    <div>• Investment Research</div>
+                    <div>• Tax Management</div>
+                    <div>• Estate Planning Tools</div>
+                    <div>• Data Integration</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter Signup */}
-      <section className="py-20 bg-offWhite">
+      <section className="py-16 sm:py-20 bg-offWhite">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-navy mb-6">
+          <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold text-navy mb-4 sm:mb-6 px-4">
             Stay Informed
           </h2>
-          <p className="text-xl text-charcoal mb-8 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-charcoal mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
             Subscribe to our newsletter for the latest insights, event announcements, and industry updates.
           </p>
-          <div className="max-w-md mx-auto flex gap-4">
+          <div className="max-w-md mx-auto flex flex-col sm:flex-row gap-3 sm:gap-4 px-4">
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-xl border border-charcoal/20 focus:outline-none focus:border-gold"
+              className="flex-1 px-4 py-3 rounded-xl border border-charcoal/20 focus:outline-none focus:border-gold text-sm sm:text-base"
             />
-            <button className="bg-gold text-navy px-6 py-3 rounded-xl font-semibold hover:bg-navy hover:text-white transition-all duration-300">
+            <button className="bg-gold text-navy px-6 py-3 rounded-xl font-semibold hover:bg-navy hover:text-white transition-all duration-300 text-sm sm:text-base whitespace-nowrap">
               Subscribe
             </button>
           </div>

@@ -31,80 +31,79 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gold/10'
-        : 'bg-white/90 backdrop-blur-sm shadow-md'
+      ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gold/10'
+      : 'bg-white/90 backdrop-blur-sm shadow-md'
       }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14 sm:h-16 md:h-20 gap-2">
           {/* Logo Section */}
-          <Link href="/" className="flex items-center space-x-4 group">
-            <div className="relative w-28 h-28 transition-transform duration-300 group-hover:scale-105">
-              <Image
-                src="/logo.png"
-                alt="Family Office Alpha Logo"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-playfair text-xl font-bold text-navy group-hover:text-gold transition-colors duration-300">
-                Family Office Alpha
-              </span>
-              <span className="text-xs text-charcoal/60 font-medium tracking-wide">
-                WEALTH • SECURITY • EXCELLENCE
-              </span>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
-            {navItems.map((item) => {
-              const isActive = pathname === item.href;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`relative px-4 py-2 font-medium transition-all duration-300 rounded-lg group ${isActive
-                      ? 'text-gold bg-gold/5'
-                      : 'text-charcoal hover:text-gold hover:bg-gold/5'
-                    }`}
-                >
-                  {item.label}
-                  {isActive && (
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-gold rounded-full"></div>
-                  )}
-                </Link>
-              );
-            })}
-          </div>
-
-          {/* CTA Button - Desktop */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              href="/contact"
-              className="bg-navy text-white px-6 py-2.5 rounded-lg font-semibold hover:bg-gold hover:text-navy transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
-            >
-              Get Started
+          <div className="flex-shrink-0">
+            <Link href="/" className="flex items-center group">
+              <div className="relative w-24 h-24 sm:w-26 sm:h-26 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28 transition-transform duration-300 group-hover:scale-105">
+                <Image
+                  src="/logo.png"
+                  alt="Family Office Alpha Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
             </Link>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg text-charcoal hover:text-gold hover:bg-gold/5 transition-all duration-300"
-              aria-label="Toggle menu"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+          {/* Desktop Navigation - Center */}
+          <div className="hidden lg:flex items-center justify-center flex-1">
+            <div className="flex items-center space-x-1 xl:space-x-2">
+              {navItems.map((item) => {
+                const isActive = pathname === item.href;
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={`relative px-2 xl:px-4 py-2 font-medium transition-all duration-300 rounded-lg group text-sm xl:text-base ${isActive
+                      ? 'text-gold bg-gold/5'
+                      : 'text-charcoal hover:text-gold hover:bg-gold/5'
+                      }`}
+                  >
+                    {item.label}
+                    {isActive && (
+                      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-gold rounded-full"></div>
+                    )}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Right Section */}
+          <div className="flex items-center flex-shrink-0">
+            {/* CTA Button - Desktop */}
+            <div className="hidden lg:flex items-center">
+              <Link
+                href="/contact"
+                className="bg-navy text-white px-3 xl:px-6 py-2.5 font-semibold hover:bg-gold hover:text-navy transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm xl:text-base whitespace-nowrap"
+              >
+                Get Started
+              </Link>
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="lg:hidden">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="p-1.5 sm:p-2 rounded-lg text-charcoal hover:text-gold hover:bg-gold/5 transition-all duration-300"
+                aria-label="Toggle menu"
+              >
+                {isOpen ? <X size={20} /> : <Menu size={20} />}
+              </button>
+            </div>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         <div className={`lg:hidden transition-all duration-300 ease-in-out ${isOpen
-            ? 'max-h-96 opacity-100'
-            : 'max-h-0 opacity-0 overflow-hidden'
+          ? 'max-h-96 opacity-100'
+          : 'max-h-0 opacity-0 overflow-hidden'
           }`}>
           <div className="py-4 space-y-2 border-t border-gold/10">
             {navItems.map((item) => {
@@ -114,8 +113,8 @@ const Navigation = () => {
                   key={item.href}
                   href={item.href}
                   className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${isActive
-                      ? 'text-gold bg-gold/10 border-l-4 border-gold'
-                      : 'text-charcoal hover:text-gold hover:bg-gold/5'
+                    ? 'text-gold bg-gold/10 border-l-4 border-gold'
+                    : 'text-charcoal hover:text-gold hover:bg-gold/5'
                     }`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -124,16 +123,7 @@ const Navigation = () => {
               );
             })}
 
-            {/* Mobile CTA */}
-            <div className="pt-4 border-t border-gold/10 mt-4">
-              <Link
-                href="/contact"
-                className="block w-full bg-navy text-white text-center px-4 py-3 rounded-lg font-semibold hover:bg-gold hover:text-navy transition-all duration-300"
-                onClick={() => setIsOpen(false)}
-              >
-                Get Started
-              </Link>
-            </div>
+
           </div>
         </div>
       </div>
