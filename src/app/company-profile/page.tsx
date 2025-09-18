@@ -1,4 +1,7 @@
+'use client';
+
 import { Award, Target, Globe, Users, Shield, TrendingUp, CheckCircle, Star, Building, Calendar, MapPin } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function CompanyProfile() {
   const stats = [
@@ -46,7 +49,12 @@ export default function CompanyProfile() {
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-navy to-charcoal text-white py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
             <div className="inline-flex items-center gap-2 bg-gold/10 text-gold px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
               <Building size={14} className="sm:w-4 sm:h-4" />
               <span className="whitespace-nowrap">Established 2008 • SEC Registered</span>
@@ -60,7 +68,7 @@ export default function CompanyProfile() {
               terrorist attacks, the Great Financial Crisis, superstorms, zero interest rates, and the pandemic. 
               We offer solutions that instill confidence.
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -69,7 +77,14 @@ export default function CompanyProfile() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {stats.map((stat, index) => (
-              <div key={stat.label} className="text-center p-4 sm:p-6 bg-offWhite rounded-2xl hover:shadow-lg transition-shadow duration-300">
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center p-4 sm:p-6 bg-offWhite rounded-2xl hover:shadow-lg transition-shadow duration-300"
+              >
                 <div className="bg-navy/5 w-12 h-12 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
                   <stat.icon className="text-navy" size={24} />
                 </div>
@@ -79,7 +94,7 @@ export default function CompanyProfile() {
                 <div className="text-charcoal/70 font-medium text-xs sm:text-sm md:text-base">
                   {stat.label}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -88,15 +103,27 @@ export default function CompanyProfile() {
       {/* Mission & Vision */}
       <section className="py-16 sm:py-20 lg:py-24 bg-offWhite">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16"
+          >
             <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-navy mb-4 sm:mb-6 px-4">
               Our Purpose & Vision
             </h2>
             <div className="w-16 sm:w-20 h-1 bg-gold mx-auto mb-6 sm:mb-8"></div>
-          </div>
+          </motion.div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
-            <div className="bg-white p-6 sm:p-8 lg:p-10 rounded-2xl shadow-lg border-l-4 border-gold">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white p-6 sm:p-8 lg:p-10 rounded-2xl shadow-lg border-l-4 border-gold"
+            >
               <Target className="text-gold mb-4 sm:mb-6" size={40} />
               <h3 className="font-playfair text-2xl sm:text-3xl font-bold text-navy mb-4 sm:mb-6">Our Mission</h3>
               <p className="text-base sm:text-lg text-charcoal/80 leading-relaxed mb-4 sm:mb-6">
@@ -118,9 +145,15 @@ export default function CompanyProfile() {
                   <span>Generational legacy preservation</span>
                 </li>
               </ul>
-            </div>
+            </motion.div>
             
-            <div className="bg-white p-6 sm:p-8 lg:p-10 rounded-2xl shadow-lg border-l-4 border-navy">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-white p-6 sm:p-8 lg:p-10 rounded-2xl shadow-lg border-l-4 border-navy"
+            >
               <Globe className="text-navy mb-4 sm:mb-6" size={40} />
               <h3 className="font-playfair text-2xl sm:text-3xl font-bold text-navy mb-4 sm:mb-6">Our Vision</h3>
               <p className="text-base sm:text-lg text-charcoal/80 leading-relaxed mb-4 sm:mb-6">
@@ -142,7 +175,7 @@ export default function CompanyProfile() {
                   <span>Trusted advisor to 100+ families by 2030</span>
                 </li>
               </ul>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -150,7 +183,13 @@ export default function CompanyProfile() {
       {/* Core Values */}
       <section className="py-16 sm:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16"
+          >
             <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-navy mb-4 sm:mb-6 px-4">
               Our Core Values
             </h2>
@@ -158,41 +197,43 @@ export default function CompanyProfile() {
             <p className="text-lg sm:text-xl text-charcoal/80 max-w-3xl mx-auto px-4">
               The principles that guide every decision and interaction with our clients.
             </p>
-          </div>
+          </motion.div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <div className="text-center p-6 sm:p-8 bg-gradient-to-b from-gold/5 to-transparent rounded-2xl hover:shadow-lg transition-all duration-300 group">
-              <div className="bg-gold/10 w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-gold/20 transition-colors">
-                <Award className="text-gold" size={32} />
+            {[
+              {
+                icon: Award,
+                title: "Excellence",
+                description: "We strive for excellence in every aspect of our service delivery, maintaining the highest professional standards and exceeding client expectations."
+              },
+              {
+                icon: Shield,
+                title: "Security",
+                description: "Security is at the core of everything we do, protecting our clients' assets and information with military-grade solutions and protocols."
+              },
+              {
+                icon: Users,
+                title: "Trust",
+                description: "We build lasting relationships based on trust, transparency, and unwavering commitment to our clients' success and confidentiality."
+              }
+            ].map((value, index) => (
+              <motion.div
+                key={value.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center p-6 sm:p-8 bg-gradient-to-b from-gold/5 to-transparent rounded-2xl hover:shadow-lg transition-all duration-300 group"
+              >
+              <div className={`${index === 0 ? 'bg-gold/10' : index === 1 ? 'bg-navy/10' : 'bg-gold/10'} w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 ${index === 0 ? 'group-hover:bg-gold/20' : index === 1 ? 'group-hover:bg-navy/20' : 'group-hover:bg-gold/20'} transition-colors`}>
+                <value.icon className={`${index === 0 ? 'text-gold' : index === 1 ? 'text-navy' : 'text-gold'}`} size={32} />
               </div>
-              <h3 className="font-playfair text-xl sm:text-2xl font-semibold text-navy mb-3 sm:mb-4">Excellence</h3>
+              <h3 className="font-playfair text-xl sm:text-2xl font-semibold text-navy mb-3 sm:mb-4">{value.title}</h3>
               <p className="text-charcoal/70 leading-relaxed text-sm sm:text-base">
-                We strive for excellence in every aspect of our service delivery, 
-                maintaining the highest professional standards and exceeding client expectations.
+                {value.description}
               </p>
-            </div>
-            
-            <div className="text-center p-6 sm:p-8 bg-gradient-to-b from-navy/5 to-transparent rounded-2xl hover:shadow-lg transition-all duration-300 group sm:col-span-2 lg:col-span-1">
-              <div className="bg-navy/10 w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-navy/20 transition-colors">
-                <Shield className="text-navy" size={32} />
-              </div>
-              <h3 className="font-playfair text-xl sm:text-2xl font-semibold text-navy mb-3 sm:mb-4">Security</h3>
-              <p className="text-charcoal/70 leading-relaxed text-sm sm:text-base">
-                Security is at the core of everything we do, protecting our clients' 
-                assets and information with military-grade solutions and protocols.
-              </p>
-            </div>
-            
-            <div className="text-center p-6 sm:p-8 bg-gradient-to-b from-gold/5 to-transparent rounded-2xl hover:shadow-lg transition-all duration-300 group sm:col-span-2 lg:col-span-1">
-              <div className="bg-gold/10 w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-gold/20 transition-colors">
-                <Users className="text-gold" size={32} />
-              </div>
-              <h3 className="font-playfair text-xl sm:text-2xl font-semibold text-navy mb-3 sm:mb-4">Trust</h3>
-              <p className="text-charcoal/70 leading-relaxed text-sm sm:text-base">
-                We build lasting relationships based on trust, transparency, 
-                and unwavering commitment to our clients' success and confidentiality.
-              </p>
-            </div>
+            </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -200,7 +241,13 @@ export default function CompanyProfile() {
       {/* Company Timeline */}
       <section className="py-16 sm:py-20 lg:py-24 bg-offWhite">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16"
+          >
             <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-navy mb-4 sm:mb-6 px-4">
               Our Journey of Excellence
             </h2>
@@ -208,7 +255,7 @@ export default function CompanyProfile() {
             <p className="text-lg sm:text-xl text-charcoal/80 max-w-3xl mx-auto px-4">
               From startup vision to industry leadership - the milestones that shaped our success.
             </p>
-          </div>
+          </motion.div>
           
           <div className="relative">
             {/* Timeline Line - Desktop */}
@@ -219,9 +266,16 @@ export default function CompanyProfile() {
             
             <div className="space-y-8 sm:space-y-12 lg:space-y-16">
               {milestones.map((milestone, index) => (
-                <div key={milestone.year} className={`flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8 ${
-                  index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                }`}>
+                <motion.div
+                  key={milestone.year}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className={`flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8 ${
+                    index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                  }`}
+                >
                   <div className="lg:w-1/2 w-full">
                     <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg ml-12 lg:ml-0 relative">
                       {/* Mobile Timeline Dot */}
@@ -256,7 +310,7 @@ export default function CompanyProfile() {
                   </div>
                   
                   <div className="lg:w-1/2 hidden lg:block"></div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -266,26 +320,33 @@ export default function CompanyProfile() {
       {/* Leadership CTA */}
       <section className="py-16 sm:py-20 bg-gradient-to-r from-navy to-charcoal">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
-            Ready to Experience the Alpha Difference?
-          </h2>
-          <p className="text-lg sm:text-xl text-offWhite/80 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-            Join the families who trust us with their most valuable assets and sensitive information.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
-            <a
-              href="/team"
-              className="bg-gold text-navy px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-white transition-all duration-300 text-sm sm:text-base"
-            >
-              Meet Our Team
-            </a>
-            <a
-              href="/contact"
-              className="border-2 border-gold text-gold px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-gold hover:text-navy transition-all duration-300 text-sm sm:text-base"
-            >
-              Schedule Consultation
-            </a>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
+              Ready to Experience the Alpha Difference?
+            </h2>
+            <p className="text-lg sm:text-xl text-offWhite/80 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+              Join the families who trust us with their most valuable assets and sensitive information.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+              <a
+                href="/team"
+                className="bg-gold text-navy px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-white transition-all duration-300 text-sm sm:text-base"
+              >
+                Meet Our Team
+              </a>
+              <a
+                href="/contact"
+                className="border-2 border-gold text-gold px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-gold hover:text-navy transition-all duration-300 text-sm sm:text-base"
+              >
+                Schedule Consultation
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>

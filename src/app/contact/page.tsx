@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -31,7 +32,12 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="bg-navy text-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
             <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-2">
               Contact Us
             </h1>
@@ -39,7 +45,7 @@ export default function Contact() {
             <p className="text-lg sm:text-xl text-offWhite max-w-3xl mx-auto px-4 leading-relaxed">
               Ready to secure your family's future? Get in touch for a confidential consultation
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -48,7 +54,13 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
             {/* Contact Form */}
-            <div className="bg-white rounded-xl shadow-md p-6 sm:p-8">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-xl shadow-md p-6 sm:p-8"
+            >
               <h2 className="font-playfair text-2xl sm:text-3xl font-bold text-navy mb-4 sm:mb-6">
                 Send us a Message
               </h2>
@@ -159,10 +171,16 @@ export default function Contact() {
                   <Send className="ml-2" size={18} />
                 </button>
               </form>
-            </div>
+            </motion.div>
 
             {/* Contact Information */}
-            <div className="space-y-6 sm:space-y-8">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="space-y-6 sm:space-y-8"
+            >
               <div className="bg-white rounded-xl shadow-md p-6 sm:p-8">
                 <h3 className="font-playfair text-xl sm:text-2xl font-bold text-navy mb-4 sm:mb-6">
                   Get in Touch
@@ -227,7 +245,7 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -235,19 +253,26 @@ export default function Contact() {
       {/* Emergency Contact */}
       <section className="py-16 sm:py-20 bg-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
-            Emergency Security Support
-          </h2>
-          <p className="text-lg sm:text-xl text-offWhite mb-6 sm:mb-8 max-w-2xl mx-auto px-4 leading-relaxed">
-            For urgent cybersecurity incidents or security breaches, our emergency response team is available 24/7.
-          </p>
-          <a
-            href="tel:+15551234567"
-            className="bg-gold text-navy px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-white hover:text-navy transition-all duration-300 inline-flex items-center text-sm sm:text-base"
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
           >
-            <Phone className="mr-2" size={18} />
-            <span className="whitespace-nowrap">Emergency Hotline: +1 (555) 123-4567</span>
-          </a>
+            <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 px-4">
+              Emergency Security Support
+            </h2>
+            <p className="text-lg sm:text-xl text-offWhite mb-6 sm:mb-8 max-w-2xl mx-auto px-4 leading-relaxed">
+              For urgent cybersecurity incidents or security breaches, our emergency response team is available 24/7.
+            </p>
+            <a
+              href="tel:+15551234567"
+              className="bg-gold text-navy px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-white hover:text-navy transition-all duration-300 inline-flex items-center text-sm sm:text-base"
+            >
+              <Phone className="mr-2" size={18} />
+              <span className="whitespace-nowrap">Emergency Hotline: +1 (555) 123-4567</span>
+            </a>
+          </motion.div>
         </div>
       </section>
     </div>

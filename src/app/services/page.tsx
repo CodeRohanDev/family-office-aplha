@@ -1,4 +1,7 @@
+'use client';
+
 import { Shield, TrendingUp, Users, Lock, BarChart3, FileText, Zap, Globe, Award, CheckCircle, ArrowRight, Star, Clock } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Services() {
   const services = [
@@ -45,7 +48,12 @@ export default function Services() {
       {/* Hero Section */}
       <section className="bg-navy text-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
             <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-2">
               Our Services
             </h1>
@@ -54,7 +62,7 @@ export default function Services() {
               Comprehensive solutions designed to protect, grow, and manage your family's wealth 
               with the highest standards of security and professionalism
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -63,8 +71,12 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             {services.map((service, index) => (
-              <div
+              <motion.div
                 key={service.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className="bg-white p-6 sm:p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group hover:-translate-y-2"
               >
                 <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
@@ -88,7 +100,7 @@ export default function Services() {
                     </ul>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -97,12 +109,24 @@ export default function Services() {
       {/* Christopher Hetner Expertise */}
       <section className="py-16 sm:py-20 bg-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16"
+          >
             <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-white mb-3 sm:mb-4 px-4">Expert Leadership in Cybersecurity</h2>
             <div className="w-16 h-0.5 bg-gold mx-auto mb-6 sm:mb-8"></div>
-          </div>
+          </motion.div>
           
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-gold/20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-gold/20"
+          >
             <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
               <div>
                 <h3 className="font-playfair text-2xl sm:text-3xl font-bold text-gold mb-4 sm:mb-6">Christopher Hetner</h3>
@@ -145,24 +169,36 @@ export default function Services() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Service Packages */}
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16"
+          >
             <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-navy mb-3 sm:mb-4 px-4">Cybersecurity Service Packages</h2>
             <div className="w-16 sm:w-20 h-1 bg-gold mx-auto mb-6 sm:mb-8"></div>
             <p className="text-lg sm:text-xl text-charcoal/80 max-w-3xl mx-auto px-4">
               We work with family offices and RIAs to identify the right cybersecurity package for your needs.
             </p>
-          </div>
+          </motion.div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
             {/* Basic Package */}
-            <div className="bg-offWhite p-6 sm:p-8 rounded-xl border-2 border-gold/20 hover:border-gold/40 transition-colors duration-300">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-offWhite p-6 sm:p-8 rounded-xl border-2 border-gold/20 hover:border-gold/40 transition-colors duration-300"
+            >
               <div className="text-center mb-6 sm:mb-8">
                 <h3 className="font-playfair text-xl sm:text-2xl font-bold text-navy mb-2">Basic Package</h3>
                 <p className="text-charcoal/70 text-sm sm:text-base">Essential cybersecurity protection</p>
@@ -233,10 +269,16 @@ export default function Services() {
               >
                 Get Basic Package
               </a>
-            </div>
+            </motion.div>
 
             {/* Comprehensive Package */}
-            <div className="bg-navy p-6 sm:p-8 rounded-xl border-2 border-navy relative overflow-hidden">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-navy p-6 sm:p-8 rounded-xl border-2 border-navy relative overflow-hidden"
+            >
               <div className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-gold text-navy px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold">
                 Most Popular
               </div>
@@ -287,7 +329,7 @@ export default function Services() {
               >
                 Get Comprehensive Package
               </a>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -295,13 +337,25 @@ export default function Services() {
       {/* Thought Leadership */}
       <section className="py-16 sm:py-20 bg-offWhite">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16"
+          >
             <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-navy mb-3 sm:mb-4 px-4">Cybersecurity Insights & Philosophy</h2>
             <div className="w-16 sm:w-20 h-1 bg-gold mx-auto mb-6 sm:mb-8"></div>
-          </div>
+          </motion.div>
           
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center mb-12 sm:mb-16">
-            <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white p-6 sm:p-8 rounded-xl shadow-lg"
+            >
               <h3 className="font-playfair text-xl sm:nt-bold text-navy mb-6">The ROI of Cybersecurity</h3>
               <blockquote className="text-lg text-charcoal/80 mb-6 italic leading-relaxed">
                 "Cybersecurity ROI is about preventing business from grinding to a halt. It's not just about protecting data—it's about ensuring business continuity and maintaining trust."
@@ -310,9 +364,15 @@ export default function Services() {
                 Our approach focuses on comprehensive risk mitigation that protects both your financial assets and your family's reputation. 
                 We understand that for family offices, a security breach isn't just a technical issue—it's a threat to generational wealth and privacy.
               </p>
-            </div>
+            </motion.div>
             
-            <div className="bg-navy p-8 rounded-xl text-white">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-navy p-8 rounded-xl text-white"
+            >
               <h3 className="font-playfair text-2xl font-bold text-gold mb-6">Next-Generation Wealth Transfer</h3>
               <div className="text-center mb-6">
                 <div className="text-4xl font-playfair font-bold text-gold mb-2">$72 Trillion</div>
@@ -322,7 +382,7 @@ export default function Services() {
                 As the largest wealth transfer in history approaches, cybersecurity becomes critical for protecting family legacies. 
                 Our solutions ensure your wealth transition is secure, compliant, and protected from emerging digital threats.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -330,35 +390,50 @@ export default function Services() {
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
             <h2 className="font-playfair text-4xl font-bold text-navy mb-4">Why Choose Family Office Alpha</h2>
             <div className="section-divider mx-auto"></div>
-          </div>
+          </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-white rounded-xl shadow-md">
-              <Shield className="text-gold mx-auto mb-4" size={64} />
-              <h3 className="font-playfair text-xl font-semibold text-navy mb-4">Expert Leadership</h3>
-              <p className="text-charcoal">
-                Led by former SEC and Treasury cybersecurity advisors with decades of experience.
-              </p>
-            </div>
-            
-            <div className="text-center p-6 bg-white rounded-xl shadow-md">
-              <Clock className="text-gold mx-auto mb-4" size={64} />
-              <h3 className="font-playfair text-xl font-semibold text-navy mb-4">24/7 Protection</h3>
-              <p className="text-charcoal">
-                Round-the-clock monitoring and support to ensure your assets are always protected.
-              </p>
-            </div>
-            
-            <div className="text-center p-6 bg-white rounded-xl shadow-md">
-              <Award className="text-gold mx-auto mb-4" size={64} />
-              <h3 className="font-playfair text-xl font-semibold text-navy mb-4">Proven Results</h3>
-              <p className="text-charcoal">
-                Trusted by family offices and RIAs with a track record of zero security breaches.
-              </p>
-            </div>
+            {[
+              {
+                icon: Shield,
+                title: "Expert Leadership",
+                description: "Led by former SEC and Treasury cybersecurity advisors with decades of experience."
+              },
+              {
+                icon: Clock,
+                title: "24/7 Protection",
+                description: "Round-the-clock monitoring and support to ensure your assets are always protected."
+              },
+              {
+                icon: Award,
+                title: "Proven Results",
+                description: "Trusted by family offices and RIAs with a track record of zero security breaches."
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center p-6 bg-white rounded-xl shadow-md"
+              >
+                <item.icon className="text-gold mx-auto mb-4" size={64} />
+                <h3 className="font-playfair text-xl font-semibold text-navy mb-4">{item.title}</h3>
+                <p className="text-charcoal">
+                  {item.description}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -366,18 +441,25 @@ export default function Services() {
       {/* CTA Section */}
       <section className="py-20 bg-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Secure Your Family's Future?
-          </h2>
-          <p className="text-xl text-offWhite mb-8 max-w-2xl mx-auto">
-            Contact us today for a confidential consultation and discover how we can protect and grow your wealth.
-          </p>
-          <a
-            href="/contact"
-            className="bg-gold text-navy px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-navy transition-all duration-300 inline-block"
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
           >
-            Schedule Consultation
-          </a>
+            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Secure Your Family's Future?
+            </h2>
+            <p className="text-xl text-offWhite mb-8 max-w-2xl mx-auto">
+              Contact us today for a confidential consultation and discover how we can protect and grow your wealth.
+            </p>
+            <a
+              href="/contact"
+              className="bg-gold text-navy px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-navy transition-all duration-300 inline-block"
+            >
+              Schedule Consultation
+            </a>
+          </motion.div>
         </div>
       </section>
     </div>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Linkedin, Mail, X } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 // Team Member Card Component
 function TeamMemberCard({ member }: { member: any }) {
@@ -199,7 +200,12 @@ export default function Team() {
       {/* Hero Section */}
       <section className="bg-navy text-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
             <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-2">
               Our Team
             </h1>
@@ -207,7 +213,7 @@ export default function Team() {
             <p className="text-lg sm:text-xl text-offWhite max-w-3xl mx-auto px-4 leading-relaxed">
               Meet the experienced professionals dedicated to protecting and growing your family's wealth
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -215,8 +221,16 @@ export default function Team() {
       <section className="py-16 sm:py-20 bg-offWhite">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
-            {teamMembers.map((member) => (
-              <TeamMemberCard key={member.name} member={member} />
+            {teamMembers.map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <TeamMemberCard member={member} />
+              </motion.div>
             ))}
           </div>
         </div>
@@ -232,7 +246,13 @@ export default function Team() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Modern Header */}
-          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16 lg:mb-20"
+          >
             <div className="inline-flex items-center gap-2 bg-navy/5 text-navy px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
               <div className="w-2 h-2 bg-gold rounded-full animate-pulse"></div>
               Strategic Excellence
@@ -246,15 +266,18 @@ export default function Team() {
               <span className="text-gold font-semibold"> decades of combined experience</span> across
               finance, technology, and family office operations.
             </p>
-          </div>
+          </motion.div>
 
           {/* Modern Grid Layout */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {advisors.map((advisor, index) => (
-              <div
+              <motion.div
                 key={advisor.name}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className="group relative"
-                style={{ animationDelay: `${index * 100}ms` }}
               >
                 {/* Person Profile Card */}
                 <div className="bg-white backdrop-blur-sm p-4 sm:p-6 rounded-2xl hover:shadow-2xl transition-all duration-500 group-hover:-translate-y-3 border-2 border-gray-200 hover:border-gold/60 relative overflow-hidden h-72 sm:h-80">
@@ -315,12 +338,18 @@ export default function Team() {
                 <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-navy to-charcoal text-white text-xs font-medium px-3 sm:px-4 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 shadow-lg whitespace-nowrap">
                   Available for Consultation
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* Bottom CTA Section */}
-          <div className="mt-12 sm:mt-16 lg:mt-20 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="mt-12 sm:mt-16 lg:mt-20 text-center"
+          >
             <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-white/50 shadow-xl">
               <h3 className="font-playfair text-xl sm:text-2xl font-bold text-navy mb-3 sm:mb-4 px-4">
                 Join Our Network of Excellence
@@ -337,20 +366,31 @@ export default function Team() {
                 <div className="w-2 h-2 bg-current rounded-full animate-pulse"></div>
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Leadership Philosophy */}
       <section className="py-16 sm:py-20 bg-offWhite">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16"
+          >
             <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-navy mb-3 sm:mb-4 px-4">Who We Are</h2>
             <div className="w-16 sm:w-20 h-1 bg-gold mx-auto"></div>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
               <h3 className="font-playfair text-xl sm:text-2xl font-semibold text-navy mb-4 sm:mb-6">
                 Decades of Finance, Accounting, and Technology Experience
               </h3>
@@ -364,9 +404,15 @@ export default function Team() {
                 investments and long-term wealth management. Our expertise spans traditional wealth
                 management and cutting-edge cybersecurity solutions.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="bg-navy p-6 sm:p-8 rounded-xl text-white">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-navy p-6 sm:p-8 rounded-xl text-white"
+            >
               <h4 className="font-playfair text-lg sm:text-xl font-semibold text-gold mb-4 sm:mb-6">Our Commitment</h4>
               <ul className="space-y-3 sm:space-y-4">
                 <li className="flex items-start">
@@ -386,7 +432,7 @@ export default function Team() {
                   <span className="text-offWhite text-sm sm:text-base">Staying ahead of emerging threats and opportunities</span>
                 </li>
               </ul>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -394,18 +440,25 @@ export default function Team() {
       {/* Join Our Team CTA */}
       <section className="py-20 bg-offWhite">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-playfair text-3xl md:text-4xl font-bold text-navy mb-6">
-            Join Our Team
-          </h2>
-          <p className="text-xl text-charcoal mb-8 max-w-2xl mx-auto">
-            We're always looking for exceptional talent to join our growing team of professionals.
-          </p>
-          <a
-            href="/contact"
-            className="bg-gold text-navy px-8 py-4 rounded-xl font-semibold hover:bg-navy hover:text-white transition-all duration-300 inline-block"
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
           >
-            View Opportunities
-          </a>
+            <h2 className="font-playfair text-3xl md:text-4xl font-bold text-navy mb-6">
+              Join Our Team
+            </h2>
+            <p className="text-xl text-charcoal mb-8 max-w-2xl mx-auto">
+              We're always looking for exceptional talent to join our growing team of professionals.
+            </p>
+            <a
+              href="/contact"
+              className="bg-gold text-navy px-8 py-4 rounded-xl font-semibold hover:bg-navy hover:text-white transition-all duration-300 inline-block"
+            >
+              View Opportunities
+            </a>
+          </motion.div>
         </div>
       </section>
     </div>

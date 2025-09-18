@@ -1,4 +1,7 @@
+'use client';
+
 import { Calendar, Users, Globe, Award, ExternalLink } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Activities() {
   const upcomingEvents = [
@@ -121,7 +124,12 @@ export default function Activities() {
       {/* Hero Section */}
       <section className="bg-navy text-white py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
             <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-2">
               Activities & Events
             </h1>
@@ -129,22 +137,32 @@ export default function Activities() {
             <p className="text-lg sm:text-xl text-offWhite max-w-3xl mx-auto px-4 leading-relaxed">
               Stay connected with industry insights, educational events, and strategic partnerships
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Upcoming Events */}
       <section className="py-16 sm:py-20 bg-offWhite">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16"
+          >
             <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-navy mb-3 sm:mb-4 px-4">Upcoming Events</h2>
             <div className="w-16 sm:w-20 h-1 bg-gold mx-auto"></div>
-          </div>
-          
+          </motion.div>
+
           <div className="space-y-6 sm:space-y-8">
             {upcomingEvents.map((event, index) => (
-              <div
+              <motion.div
                 key={event.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className="bg-white rounded-xl shadow-md p-6 sm:p-8 hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 sm:gap-6">
@@ -156,11 +174,11 @@ export default function Activities() {
                       <div>
                         <div className="text-gold font-semibold text-sm sm:text-base">{event.type}</div>
                         <div className="text-charcoal text-xs sm:text-sm">
-                          {new Date(event.date).toLocaleDateString('en-US', { 
-                            weekday: 'long', 
-                            year: 'numeric', 
-                            month: 'long', 
-                            day: 'numeric' 
+                          {new Date(event.date).toLocaleDateString('en-US', {
+                            weekday: 'long',
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
                           })} • {event.time}
                         </div>
                       </div>
@@ -188,7 +206,7 @@ export default function Activities() {
                     </a>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -197,15 +215,25 @@ export default function Activities() {
       {/* Past Events */}
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16"
+          >
             <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-navy mb-3 sm:mb-4 px-4">Past Events</h2>
             <div className="w-16 sm:w-20 h-1 bg-gold mx-auto"></div>
-          </div>
-          
+          </motion.div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {pastEvents.map((event, index) => (
-              <div
+              <motion.div
                 key={event.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className="bg-offWhite rounded-xl p-5 sm:p-6 hover:shadow-md transition-all duration-300"
               >
                 <div className="flex items-center gap-3 mb-3 sm:mb-4">
@@ -242,7 +270,7 @@ export default function Activities() {
                     View Recording →
                   </a>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -251,25 +279,35 @@ export default function Activities() {
       {/* Key Topics */}
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16"
+          >
             <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-navy mb-3 sm:mb-4 px-4">Key Topics We Cover</h2>
             <div className="w-16 sm:w-20 h-1 bg-gold mx-auto mb-6 sm:mb-8"></div>
             <p className="text-lg sm:text-xl text-charcoal/80 max-w-3xl mx-auto px-4">
               Our events and webinars cover the most critical topics facing family offices today.
             </p>
-          </div>
-          
+          </motion.div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {keyTopics.map((topic, index) => (
-              <div
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.05 }}
+                viewport={{ once: true }}
                 className="bg-offWhite p-4 sm:p-6 rounded-xl hover:shadow-lg transition-all duration-300 group hover:-translate-y-1"
               >
                 <div className="flex items-start">
                   <div className="w-2 h-2 bg-gold rounded-full mt-2 mr-3 sm:mr-4 flex-shrink-0 group-hover:bg-navy transition-colors"></div>
                   <span className="text-charcoal font-medium group-hover:text-navy transition-colors text-sm sm:text-base leading-relaxed">{topic}</span>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -278,18 +316,28 @@ export default function Activities() {
       {/* Partnerships */}
       <section className="py-16 sm:py-20 bg-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16"
+          >
             <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-white mb-3 sm:mb-4 px-4">Featured Partnerships</h2>
             <div className="w-16 sm:w-20 h-1 bg-gold mx-auto mb-6 sm:mb-8"></div>
             <p className="text-offWhite max-w-2xl mx-auto px-4 text-sm sm:text-base">
               Collaborating with industry leaders to provide comprehensive solutions for our clients
             </p>
-          </div>
-          
+          </motion.div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {partnerships.map((partnership, index) => (
-              <div
+              <motion.div
                 key={partnership.name}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-5 sm:p-6 border border-gold/20"
               >
                 <div className="flex items-center gap-3 mb-3 sm:mb-4">
@@ -305,7 +353,7 @@ export default function Activities() {
                 <p className="text-offWhite leading-relaxed text-sm sm:text-base">
                   {partnership.description}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -314,20 +362,32 @@ export default function Activities() {
       {/* Publications & Research */}
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16"
+          >
             <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-navy mb-3 sm:mb-4 px-4">Publications & Research</h2>
             <div className="w-16 sm:w-20 h-1 bg-gold mx-auto mb-6 sm:mb-8"></div>
             <p className="text-lg sm:text-xl text-charcoal/80 max-w-3xl mx-auto px-4">
               Comprehensive research and publications to guide family office technology and strategy decisions.
             </p>
-          </div>
-          
-          <div className="bg-offWhite rounded-2xl p-6 sm:p-8">
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="bg-offWhite rounded-2xl p-6 sm:p-8"
+          >
             <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
               <div>
                 <h3 className="font-playfair text-xl sm:text-2xl font-bold text-navy mb-4 sm:mb-6">Technology Provider Guide</h3>
                 <p className="text-base sm:text-lg text-charcoal/80 mb-4 sm:mb-6 leading-relaxed">
-                  Sponsored by Family Office Alpha and written by AlphaMille, this comprehensive guide defines 
+                  Sponsored by Family Office Alpha and written by AlphaMille, this comprehensive guide defines
                   13 categories of family office technology with detailed vendor lists and solutions.
                 </p>
                 <div className="space-y-3 sm:space-y-4">
@@ -345,7 +405,7 @@ export default function Activities() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-navy p-6 sm:p-8 rounded-xl text-white">
                 <h4 className="font-playfair text-lg sm:text-xl font-bold text-gold mb-3 sm:mb-4">Research Categories</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-xs sm:text-sm">
@@ -369,29 +429,36 @@ export default function Activities() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Newsletter Signup */}
       <section className="py-16 sm:py-20 bg-offWhite">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold text-navy mb-4 sm:mb-6 px-4">
-            Stay Informed
-          </h2>
-          <p className="text-lg sm:text-xl text-charcoal mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-            Subscribe to our newsletter for the latest insights, event announcements, and industry updates.
-          </p>
-          <div className="max-w-md mx-auto flex flex-col sm:flex-row gap-3 sm:gap-4 px-4">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-xl border border-charcoal/20 focus:outline-none focus:border-gold text-sm sm:text-base"
-            />
-            <button className="bg-gold text-navy px-6 py-3 rounded-xl font-semibold hover:bg-navy hover:text-white transition-all duration-300 text-sm sm:text-base whitespace-nowrap">
-              Subscribe
-            </button>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-bold text-navy mb-4 sm:mb-6 px-4">
+              Stay Informed
+            </h2>
+            <p className="text-lg sm:text-xl text-charcoal mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+              Subscribe to our newsletter for the latest insights, event announcements, and industry updates.
+            </p>
+            <div className="max-w-md mx-auto flex flex-col sm:flex-row gap-3 sm:gap-4 px-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 rounded-xl border border-charcoal/20 focus:outline-none focus:border-gold text-sm sm:text-base"
+              />
+              <button className="bg-gold text-navy px-6 py-3 rounded-xl font-semibold hover:bg-navy hover:text-white transition-all duration-300 text-sm sm:text-base whitespace-nowrap">
+                Subscribe
+              </button>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
