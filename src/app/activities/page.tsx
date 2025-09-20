@@ -36,6 +36,26 @@ export default function Activities() {
 
   const pastEvents = [
     {
+      date: '2024-10-18',
+      title: 'Reputational & Financial Impact of Cyber Events',
+      type: 'Webinar',
+      description: 'In this webinar you\'ll learn how to measure the return on your investment in cybersecurity, and how to get the most out of your cybersecurity program for years to come. Hear from our CEO, Julia Valentine and our experts, Anthony Carter and Mike Wilkes, in this power hour webinar.',
+      speakers: ['Julia Valentine', 'Anthony Carter', 'Mike Wilkes'],
+      attendees: 175,
+      recording: 'https://youtu.be/8e5w1EeRHk',
+      additionalLink: 'https://www.foalpha.com/videos/v/it-is-nhsde-3akb4-bm5td'
+    },
+    {
+      date: '2024-09-30',
+      title: 'Family Office List MasterClass: Family Office Technology & Cybersecurity',
+      type: 'MasterClass',
+      description: 'Julia Valentine brings over 20 years of experience at top-tier firms, including JPMorgan, D.E. Shaw, and Mousse Partners, a prominent family office. She has also served as COO and CTO of a family office with $1.5 billion ...',
+      speakers: ['Danielle Patterson', 'Julia Valentine'],
+      attendees: 220,
+      recording: 'https://youtu.be/1Q5JWJigK5A',
+      additionalLink: 'https://www.foalpha.com/videos/v/daily-calm-yyhd4-sgp3h'
+    },
+    {
       date: '2024-09-30',
       title: 'Family Office Alpha for Athletes',
       type: 'Partnership Event',

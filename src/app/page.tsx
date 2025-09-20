@@ -1,6 +1,8 @@
 import Hero from '@/components/Hero';
 import ServicePreview from '@/components/ServicePreview';
 import AboutPreview from '@/components/AboutPreview';
+import IsabellaProfile from '@/components/IsabellaProfile';
+import Testimonials from '@/components/Testimonials';
 
 export default function Home() {
   return (
@@ -8,6 +10,8 @@ export default function Home() {
       <Hero />
       <ServicePreview />
       <AboutPreview />
+      <IsabellaProfile />
+      <Testimonials />
     </div>
   );
 }

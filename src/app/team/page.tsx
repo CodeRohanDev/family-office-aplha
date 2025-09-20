@@ -28,13 +28,23 @@ function TeamMemberCard({ member }: { member: any }) {
             {/* Profile Avatar */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative">
-                <div className="w-24 h-24 sm:w-28 sm:h-28 bg-gradient-to-br from-gold/30 to-gold/10 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-gold/20 shadow-xl">
-                  <span className="text-gold font-playfair text-2xl sm:text-3xl font-bold tracking-wide">
-                    {member.name.split(' ').map((n: string) => n[0]).join('')}
-                  </span>
-                </div>
+                {member.image ? (
+                  <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden border-4 border-gold/20 shadow-xl">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-32 h-32 sm:w-40 sm:h-40 bg-gradient-to-br from-gold/30 to-gold/10 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-gold/20 shadow-xl">
+                    <span className="text-gold font-playfair text-3xl sm:text-4xl font-bold tracking-wide">
+                      {member.name.split(' ').map((n: string) => n[0]).join('')}
+                    </span>
+                  </div>
+                )}
                 {/* Glow effect */}
-                <div className="absolute inset-0 w-24 h-24 sm:w-28 sm:h-28 bg-gold/20 rounded-2xl blur-xl -z-10"></div>
+                <div className="absolute inset-0 w-32 h-32 sm:w-40 sm:h-40 bg-gold/20 rounded-2xl blur-xl -z-10"></div>
               </div>
             </div>
           </div>
@@ -103,7 +113,7 @@ function TeamMemberCard({ member }: { member: any }) {
             </div>
 
             {/* Contact Section */}
-            <div className="pt-4 sm:pt-6 border-t border-gray-100 mt-3 sm:mt-4">
+            {/* <div className="pt-4 sm:pt-6 border-t border-gray-100 mt-3 sm:mt-4">
               <div className="flex justify-center gap-3 sm:gap-4">
                 <a
                   href={member.linkedin}
@@ -120,7 +130,7 @@ function TeamMemberCard({ member }: { member: any }) {
                   <Mail className="text-gold group-hover/link:text-navy transition-colors duration-300" size={18} />
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -134,7 +144,7 @@ export default function Team() {
       name: 'Julia Valentine',
       title: 'CEO',
       bio: 'Julia Valentine is a solution-focused FinTech Advisor to boards and management teams with an MBA from Columbia Business School and undergraduate degree from NYU Stern. Throughout her executive career, Ms. Valentine has held leadership positions at JPMorgan Chase, D. E. Shaw and Mousse Partners, one of the largest family offices in the world. As a Vice President at JPMorgan Chase, Ms. Valentine led some of the bank\'s key technology projects, including the implementation of the global Equity Derivative portfolio into the Value-at-Risk system, the implementation of the Program Trading solution, and saving $4.5M annually on risk infrastructure through automation process re-engineering.',
-      image: '/team/julia.jpg',
+      image: '/team/JuliaValentine.jpg',
       linkedin: 'https://www.alphamille.com/julia-valentine-bio',
       email: 'julia@foalpha.com'
     },
@@ -142,7 +152,7 @@ export default function Team() {
       name: 'Tracy McWilliams',
       title: 'Co-Founder',
       bio: 'Tracy McWilliams is a co-founder of the Digital Evolution Institute and an accomplished investor and Board member to teams, technologies and firms that disrupt their industries. She holds an MBA from Columbia Business School and an undergraduate degree from NYU Stern. Ms. McWilliams is the founder, investor and CEO of Inspire Global Ventures (IGV) and General Partner of the IGV Transformative Technology Fund. She is also the investor and founder of Jaspy, a disruptive infrastructure and alternatives technology platform. Throughout her career, Tracy has demonstrated expertise in identifying and nurturing breakthrough technologies that inspire transformative problem-solving across multiple industries.',
-      image: '/team/tracy.jpg',
+      image: '/team/TracyMcWilliams.jpg',
       linkedin: 'https://www.digitalevolution.institute/team',
       email: 'tracy@foalpha.com'
     },
@@ -150,7 +160,7 @@ export default function Team() {
       name: 'Michael Laido',
       title: 'CFO',
       bio: 'Michael Laido brings extensive finance and accounting expertise to our team. With years of experience in financial management and strategic planning, he has worked across various sectors including technology and wealth management. His background includes implementing financial systems and processes that enhance operational efficiency and support long-term growth strategies for high-net-worth families and institutional clients.',
-      image: '/team/michael.jpg',
+      image: '/team/MichaelLaido.jpg',
       linkedin: '#',
       email: 'michael@foalpha.com'
     },
@@ -158,7 +168,7 @@ export default function Team() {
       name: 'Phoebe Van Tran',
       title: 'Managing Partner',
       bio: 'Phoebe Van Tran is an accomplished finance professional with deep expertise in family office operations and wealth management. Her career spans multiple disciplines including investment management, financial planning, and technology implementation. She has extensive experience working with ultra-high-net-worth families, helping them navigate complex financial structures while leveraging cutting-edge technology solutions to optimize their wealth management strategies.',
-      image: '/team/phoebe.jpg',
+      image: '/team/PhoebeVanTran.jpg',
       linkedin: '#',
       email: 'phoebe@foalpha.com'
     },
@@ -166,32 +176,29 @@ export default function Team() {
 
   const advisors = [
     {
-      name: 'Senior Finance Advisor',
-      title: 'Former Investment Banking VP with 15+ years in wealth management and family office operations'
+      name: 'Grace Cassab',
+      title: 'Senior Finance Advisor',
+      image: '/team/GraceCassab.jpg'
     },
     {
-      name: 'Technology Strategy Advisor',
-      title: 'Former CTO with expertise in fintech solutions and cybersecurity for high-net-worth families'
+      name: 'Mike Blogna',
+      title: 'Technology Strategy Advisor',
+      image: '/team/MikeBlogna.jpg'
     },
     {
-      name: 'Family Office Operations Advisor',
-      title: 'Former Managing Director with 20+ years managing ultra-high-net-worth family portfolios'
+      name: 'Caitlin Panasci',
+      title: 'Family Office Operations Advisor',
+      image: '/team/CaitlinPanasci.jpg'
     },
     {
-      name: 'Risk Management Advisor',
-      title: 'Former Chief Risk Officer specializing in alternative investments and family office governance'
+      name: 'Jenny Trang Nguyen',
+      title: 'Risk Management Advisor',
+      image: '/team/JennyTrangNguyen.jpg'
     },
     {
-      name: 'Compliance & Regulatory Advisor',
-      title: 'Former SEC attorney with expertise in family office regulatory compliance and structure'
-    },
-    {
-      name: 'Digital Transformation Advisor',
-      title: 'Former McKinsey Partner specializing in financial services technology and process optimization'
-    },
-    {
-      name: 'Investment Strategy Advisor',
-      title: 'Former Goldman Sachs MD with expertise in private wealth management and alternative investments'
+      name: 'Brinkley Skye',
+      title: 'Compliance & Regulatory Advisor',
+      image: '/team/BrinkleySkye.jpg'
     }
   ];
 
@@ -214,6 +221,160 @@ export default function Team() {
               Meet the experienced professionals dedicated to protecting and growing your family's wealth
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Isabella Kennedy Special Section */}
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-white to-offWhite/50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-10 right-10 w-64 h-64 bg-gold/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-48 h-48 bg-navy/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12 sm:mb-16"
+          >
+            <div className="inline-flex items-center gap-2 bg-gold/10 text-navy px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <div className="w-2 h-2 bg-gold rounded-full animate-pulse"></div>
+              Strategic Partnership
+            </div>
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-navy mb-4 leading-tight">
+              Strategic Leadership Excellence
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-gold via-gold to-gold/50 mx-auto mb-6 rounded-full"></div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Isabella's Profile */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="flex justify-center lg:justify-start"
+            >
+              <div className="bg-white rounded-3xl p-8 shadow-2xl border border-gold/20 hover:shadow-3xl transition-all duration-500 max-w-md">
+                {/* Profile Image */}
+                <div className="relative mb-6">
+                  <div className="w-full h-80 rounded-2xl overflow-hidden shadow-lg">
+                    <img
+                      src="/team/IsabellaKennedy.jpg"
+                      alt="Isabella Kennedy - Strategic Director"
+                      className="w-full h-full object-cover object-center"
+                    />
+                  </div>
+                  <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-navy to-gold text-white px-6 py-2 rounded-full font-semibold shadow-lg text-sm">
+                    Strategic Director
+                  </div>
+                </div>
+
+                {/* Name and Title */}
+                <div className="text-center mb-6">
+                  <h3 className="font-playfair text-2xl font-bold text-navy mb-2">
+                    Isabella Kennedy
+                  </h3>
+                  <div className="space-y-1">
+                    <p className="text-gold font-semibold text-lg">Strategic Director at CHANEL</p>
+                    <p className="text-charcoal/70 text-sm">& Strategic Advisor, Family Office Alpha</p>
+                  </div>
+                </div>
+
+                {/* Education Badge */}
+                <div className="bg-navy/5 rounded-xl p-4 text-center">
+                  <div className="flex items-center justify-center mb-2">
+                    <div className="w-4 h-4 bg-gold rounded-full mr-2"></div>
+                    <span className="font-semibold text-navy text-sm">MBA, UCLA</span>
+                  </div>
+                  <p className="text-charcoal/80 text-xs">University of California, Los Angeles</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Professional Excellence */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
+              {/* Leadership Impact */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gold/10">
+                <h3 className="font-playfair text-2xl font-bold text-navy mb-6 flex items-center">
+                  <div className="w-8 h-8 bg-gold/20 rounded-lg flex items-center justify-center mr-3">
+                    <div className="w-4 h-4 bg-gold rounded-full"></div>
+                  </div>
+                  Strategic Leadership Impact
+                </h3>
+
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-semibold text-navy mb-3">Current Leadership Role</h4>
+                    <p className="text-charcoal/80 text-sm leading-relaxed">
+                      As Strategic Director at CHANEL, Isabella oversees marketing expansion management,
+                      driving innovation in luxury brand strategy and digital transformation initiatives
+                      across global markets.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="bg-navy/5 rounded-lg p-4 text-center">
+                      <p className="text-2xl font-playfair font-bold text-gold mb-1">10+</p>
+                      <p className="text-navy font-medium text-xs">Years Experience</p>
+                    </div>
+                    <div className="bg-gold/5 rounded-lg p-4 text-center">
+                      <p className="text-2xl font-playfair font-bold text-navy mb-1">MBA</p>
+                      <p className="text-charcoal/70 font-medium text-xs">UCLA Graduate</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Strategic Partnership */}
+              <div className="bg-gradient-to-r from-navy to-charcoal rounded-2xl p-8 text-white">
+                <h3 className="font-playfair text-xl font-bold mb-4 flex items-center">
+                  <div className="w-8 h-8 bg-gold/20 rounded-lg flex items-center justify-center mr-3">
+                    <div className="w-4 h-4 bg-gold rounded-full"></div>
+                  </div>
+                  Strategic Partnership
+                </h3>
+                <p className="text-white/90 leading-relaxed mb-6">
+                  Isabella brings her extensive experience in luxury brand management and strategic innovation
+                  to Family Office Alpha, providing invaluable insights for high-net-worth families seeking
+                  sophisticated wealth management solutions.
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div className="text-center">
+                    <p className="text-gold font-semibold text-sm">Strategic Planning</p>
+                    <p className="text-white/70 text-xs">& Execution</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-gold font-semibold text-sm">Digital Innovation</p>
+                    <p className="text-white/70 text-xs">& Marketing</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-gold font-semibold text-sm">Brand Management</p>
+                    <p className="text-white/70 text-xs">Excellence</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Quote */}
+              <div className="bg-gradient-to-r from-gold/5 to-navy/5 rounded-xl p-6 border-l-4 border-gold">
+                <p className="text-charcoal/80 text-sm italic leading-relaxed mb-3">
+                  "Leveraging strategic innovation to create seamless experiences that drive both luxury brand excellence and family office success."
+                </p>
+                <p className="text-navy font-semibold text-xs">— Isabella Kennedy, Strategic Director</p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -288,17 +449,23 @@ export default function Team() {
                   <div className="relative z-10 h-full flex flex-col">
                     {/* Profile Avatar Section */}
                     <div className="flex flex-col items-center pt-3 sm:pt-4 mb-4 sm:mb-6">
-                      {/* Profile Picture Placeholder */}
+                      {/* Profile Picture */}
                       <div className="relative mb-3 sm:mb-4">
-                        <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-navy/25 to-gold/25 rounded-full flex items-center justify-center group-hover:from-navy/40 group-hover:to-gold/40 transition-all duration-500 border-4 border-white shadow-xl group-hover:shadow-2xl ring-4 ring-gold/40 group-hover:ring-gold/70">
-                          <span className="text-navy group-hover:text-gold font-playfair text-lg sm:text-xl font-bold transition-colors duration-300">
-                            {advisor.name.split(' ').map((n: string) => n[0]).join('')}
-                          </span>
-                        </div>
-                        {/* Online Status Indicator */}
-                        <div className="absolute -bottom-1 -right-1 w-5 h-5 sm:w-6 sm:h-6 bg-emerald-500 rounded-full border-4 border-white shadow-lg">
-                          <div className="w-full h-full bg-emerald-400 rounded-full animate-pulse"></div>
-                        </div>
+                        {advisor.image ? (
+                          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-4 border-white shadow-xl group-hover:shadow-2xl ring-4 ring-gold/40 group-hover:ring-gold/70 transition-all duration-500">
+                            <img
+                              src={advisor.image}
+                              alt={advisor.name}
+                              className="w-full h-full object-cover object-center"
+                            />
+                          </div>
+                        ) : (
+                          <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-navy/25 to-gold/25 rounded-full flex items-center justify-center group-hover:from-navy/40 group-hover:to-gold/40 transition-all duration-500 border-4 border-white shadow-xl group-hover:shadow-2xl ring-4 ring-gold/40 group-hover:ring-gold/70">
+                            <span className="text-navy group-hover:text-gold font-playfair text-lg sm:text-xl font-bold transition-colors duration-300">
+                              {advisor.name.split(' ').map((n: string) => n[0]).join('')}
+                            </span>
+                          </div>
+                        )}
                       </div>
 
                       {/* Name */}
@@ -310,17 +477,17 @@ export default function Team() {
                       <div className="inline-flex items-center gap-1 bg-navy/15 group-hover:bg-gold/25 px-2 sm:px-3 py-1 rounded-full transition-all duration-300 mb-3 sm:mb-4 border border-navy/20 group-hover:border-gold/40">
                         <div className="w-2 h-2 bg-gold rounded-full group-hover:bg-gold animate-pulse"></div>
                         <span className="text-xs font-semibold text-navy group-hover:text-gold transition-colors duration-300">
-                          Senior Advisor
+                          Advisor
                         </span>
                       </div>
                     </div>
 
                     {/* Experience/Bio Section */}
-                    <div className="flex-1 flex flex-col justify-center">
+                    {/* <div className="flex-1 flex flex-col justify-center">
                       <p className="text-charcoal/80 text-xs sm:text-sm leading-relaxed text-center group-hover:text-charcoal transition-colors duration-300 px-2 font-medium">
                         {advisor.title}
                       </p>
-                    </div>
+                    </div> */}
 
                     {/* Profile Footer */}
                     <div className="pt-3 sm:pt-4 border-t-2 border-gray-200 group-hover:border-gold/50 transition-colors duration-300">
@@ -329,14 +496,6 @@ export default function Team() {
                       </div>
                     </div>
                   </div>
-
-                  {/* Profile Card Accent */}
-                  <div className="absolute top-4 sm:top-6 right-4 sm:right-6 w-3 h-3 sm:w-4 sm:h-4 bg-gold/60 rounded-full group-hover:bg-gold transition-colors duration-300 shadow-md"></div>
-                </div>
-
-                {/* Professional Status Badge */}
-                <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-navy to-charcoal text-white text-xs font-medium px-3 sm:px-4 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 shadow-lg whitespace-nowrap">
-                  Available for Consultation
                 </div>
               </motion.div>
             ))}

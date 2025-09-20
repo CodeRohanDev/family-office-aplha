@@ -17,7 +17,6 @@ const Navigation = () => {
     { href: '/services', label: 'Services' },
     { href: '/team', label: 'Team' },
     { href: '/activities', label: 'Insights' },
-    { href: '/contact', label: 'Contact' },
   ];
 
   // Handle scroll effect
@@ -83,7 +82,7 @@ const Navigation = () => {
                 href="/contact"
                 className="bg-navy text-white px-3 xl:px-6 py-2.5 font-semibold hover:bg-gold hover:text-navy transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm xl:text-base whitespace-nowrap"
               >
-                Get Started
+                Contact Us
               </Link>
             </div>
 
@@ -123,6 +122,14 @@ const Navigation = () => {
               );
             })}
 
+            {/* Contact Button - Mobile */}
+            <Link
+              href="/contact"
+              className="block mx-4 mt-4 bg-navy text-white px-4 py-3 font-semibold hover:bg-gold hover:text-navy transition-all duration-300 shadow-md text-center rounded-lg"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact Us
+            </Link>
 
           </div>
         </div>

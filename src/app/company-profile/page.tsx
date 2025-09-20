@@ -2,6 +2,7 @@
 
 import { Award, Target, Globe, Users, Shield, TrendingUp, CheckCircle, Star, Building, Calendar, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
+import ChartsSection from '@/components/ChartsSection';
 
 export default function CompanyProfile() {
   const stats = [
@@ -64,8 +65,8 @@ export default function CompanyProfile() {
             </h1>
             <div className="w-16 sm:w-20 h-1 bg-gold mx-auto mb-6 sm:mb-8"></div>
             <p className="text-lg sm:text-xl md:text-2xl text-offWhite/90 max-w-4xl mx-auto leading-relaxed px-4">
-              Our Management Team has seen economic and interest rate fluctuations, the tech bubble, 
-              terrorist attacks, the Great Financial Crisis, superstorms, zero interest rates, and the pandemic. 
+              Our Management Team has seen economic and interest rate fluctuations, the tech bubble,
+              terrorist attacks, the Great Financial Crisis, superstorms, zero interest rates, and the pandemic.
               We offer solutions that instill confidence.
             </p>
           </motion.div>
@@ -100,6 +101,9 @@ export default function CompanyProfile() {
         </div>
       </section>
 
+      {/* Charts Section */}
+      <ChartsSection />
+
       {/* Mission & Vision */}
       <section className="py-16 sm:py-20 lg:py-24 bg-offWhite">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -115,7 +119,7 @@ export default function CompanyProfile() {
             </h2>
             <div className="w-16 sm:w-20 h-1 bg-gold mx-auto mb-6 sm:mb-8"></div>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -127,8 +131,8 @@ export default function CompanyProfile() {
               <Target className="text-gold mb-4 sm:mb-6" size={40} />
               <h3 className="font-playfair text-2xl sm:text-3xl font-bold text-navy mb-4 sm:mb-6">Our Mission</h3>
               <p className="text-base sm:text-lg text-charcoal/80 leading-relaxed mb-4 sm:mb-6">
-                To provide exceptional family office and cybersecurity advisory services that protect, 
-                preserve, and grow our clients' wealth while ensuring the highest standards of digital 
+                To provide exceptional family office and cybersecurity advisory services that protect,
+                preserve, and grow our clients' wealth while ensuring the highest standards of digital
                 security and privacy protection.
               </p>
               <ul className="space-y-2 sm:space-y-3">
@@ -146,7 +150,7 @@ export default function CompanyProfile() {
                 </li>
               </ul>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -157,8 +161,8 @@ export default function CompanyProfile() {
               <Globe className="text-navy mb-4 sm:mb-6" size={40} />
               <h3 className="font-playfair text-2xl sm:text-3xl font-bold text-navy mb-4 sm:mb-6">Our Vision</h3>
               <p className="text-base sm:text-lg text-charcoal/80 leading-relaxed mb-4 sm:mb-6">
-                To be the world's most trusted advisor for high-net-worth families, setting the 
-                standard for integrated wealth management and cybersecurity excellence in the 
+                To be the world's most trusted advisor for high-net-worth families, setting the
+                standard for integrated wealth management and cybersecurity excellence in the
                 digital age.
               </p>
               <ul className="space-y-2 sm:space-y-3">
@@ -198,7 +202,7 @@ export default function CompanyProfile() {
               The principles that guide every decision and interaction with our clients.
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
@@ -225,14 +229,14 @@ export default function CompanyProfile() {
                 viewport={{ once: true }}
                 className="text-center p-6 sm:p-8 bg-gradient-to-b from-gold/5 to-transparent rounded-2xl hover:shadow-lg transition-all duration-300 group"
               >
-              <div className={`${index === 0 ? 'bg-gold/10' : index === 1 ? 'bg-navy/10' : 'bg-gold/10'} w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 ${index === 0 ? 'group-hover:bg-gold/20' : index === 1 ? 'group-hover:bg-navy/20' : 'group-hover:bg-gold/20'} transition-colors`}>
-                <value.icon className={`${index === 0 ? 'text-gold' : index === 1 ? 'text-navy' : 'text-gold'}`} size={32} />
-              </div>
-              <h3 className="font-playfair text-xl sm:text-2xl font-semibold text-navy mb-3 sm:mb-4">{value.title}</h3>
-              <p className="text-charcoal/70 leading-relaxed text-sm sm:text-base">
-                {value.description}
-              </p>
-            </motion.div>
+                <div className={`${index === 0 ? 'bg-gold/10' : index === 1 ? 'bg-navy/10' : 'bg-gold/10'} w-16 h-16 sm:w-20 sm:h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 sm:mb-6 ${index === 0 ? 'group-hover:bg-gold/20' : index === 1 ? 'group-hover:bg-navy/20' : 'group-hover:bg-gold/20'} transition-colors`}>
+                  <value.icon className={`${index === 0 ? 'text-gold' : index === 1 ? 'text-navy' : 'text-gold'}`} size={32} />
+                </div>
+                <h3 className="font-playfair text-xl sm:text-2xl font-semibold text-navy mb-3 sm:mb-4">{value.title}</h3>
+                <p className="text-charcoal/70 leading-relaxed text-sm sm:text-base">
+                  {value.description}
+                </p>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -256,14 +260,14 @@ export default function CompanyProfile() {
               From startup vision to industry leadership - the milestones that shaped our success.
             </p>
           </motion.div>
-          
+
           <div className="relative">
             {/* Timeline Line - Desktop */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gold/20 hidden lg:block"></div>
-            
+
             {/* Timeline Line - Mobile */}
             <div className="absolute left-6 top-0 w-0.5 h-full bg-gold/20 lg:hidden"></div>
-            
+
             <div className="space-y-8 sm:space-y-12 lg:space-y-16">
               {milestones.map((milestone, index) => (
                 <motion.div
@@ -272,15 +276,14 @@ export default function CompanyProfile() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className={`flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8 ${
-                    index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                  }`}
+                  className={`flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8 ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                    }`}
                 >
                   <div className="lg:w-1/2 w-full">
                     <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg ml-12 lg:ml-0 relative">
                       {/* Mobile Timeline Dot */}
                       <div className="absolute -left-14 top-6 w-4 h-4 bg-gold rounded-full border-2 border-white shadow-lg lg:hidden"></div>
-                      
+
                       <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
                         <div className="bg-navy text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg font-playfair text-lg sm:text-xl font-bold inline-block w-fit">
                           {milestone.year}
@@ -303,12 +306,12 @@ export default function CompanyProfile() {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Timeline Dot - Desktop */}
                   <div className="hidden lg:block relative">
                     <div className="w-6 h-6 bg-gold rounded-full border-4 border-white shadow-lg"></div>
                   </div>
-                  
+
                   <div className="lg:w-1/2 hidden lg:block"></div>
                 </motion.div>
               ))}
