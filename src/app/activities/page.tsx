@@ -1,9 +1,22 @@
 'use client';
 
-import { Calendar, Users, Globe, Award, ExternalLink } from 'lucide-react';
+import { Calendar, Users, Globe, Award, ExternalLink, Play, X } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 export default function Activities() {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [currentVideoId, setCurrentVideoId] = useState('');
+
+  const openVideoModal = (videoId: string) => {
+    setCurrentVideoId(videoId);
+    setIsVideoModalOpen(true);
+  };
+
+  const closeVideoModal = () => {
+    setIsVideoModalOpen(false);
+    setCurrentVideoId('');
+  };
   const upcomingEvents = [
     {
       date: '2025-01-15',
@@ -12,7 +25,7 @@ export default function Activities() {
       description: 'Comprehensive cybersecurity training covering ROI analysis, technology implementation, governance frameworks, and reputation management for family offices.',
       time: '2:00 PM EST',
       speakers: ['Julia Valentine', 'Christopher Hetner'],
-      registration: 'https://www.foalpha.com/videos'
+      registration: '5vIRN_4C_kE'
     },
     {
       date: '2025-02-20',
@@ -21,7 +34,7 @@ export default function Activities() {
       description: 'Comprehensive program teaching wealth management, family office creation, and financial fitness specifically designed for professional athletes.',
       time: '3:00 PM EST',
       speakers: ['Julia Valentine', 'Garrick Jones'],
-      registration: 'https://www.foalpha.com/videos'
+      registration: '5vIRN_4C_kE'
     },
     {
       date: '2025-03-15',
@@ -30,7 +43,7 @@ export default function Activities() {
       description: 'Helping athletes prepare for life after sports with comprehensive wealth transition and legacy planning strategies.',
       time: '2:00 PM EST',
       speakers: ['Garrick Jones', 'Julia Valentine'],
-      registration: 'https://www.foalpha.com/videos'
+      registration: '5vIRN_4C_kE'
     }
   ];
 
@@ -42,8 +55,8 @@ export default function Activities() {
       description: 'In this webinar you\'ll learn how to measure the return on your investment in cybersecurity, and how to get the most out of your cybersecurity program for years to come. Hear from our CEO, Julia Valentine and our experts, Anthony Carter and Mike Wilkes, in this power hour webinar.',
       speakers: ['Julia Valentine', 'Anthony Carter', 'Mike Wilkes'],
       attendees: 175,
-      recording: 'https://youtu.be/8e5w1EeRHk',
-      additionalLink: 'https://www.foalpha.com/videos/v/it-is-nhsde-3akb4-bm5td'
+      recording: '5vIRN_4C_kE',
+      additionalLink: '5vIRN_4C_kE'
     },
     {
       date: '2024-09-30',
@@ -52,8 +65,8 @@ export default function Activities() {
       description: 'Julia Valentine brings over 20 years of experience at top-tier firms, including JPMorgan, D.E. Shaw, and Mousse Partners, a prominent family office. She has also served as COO and CTO of a family office with $1.5 billion ...',
       speakers: ['Danielle Patterson', 'Julia Valentine'],
       attendees: 220,
-      recording: 'https://youtu.be/1Q5JWJigK5A',
-      additionalLink: 'https://www.foalpha.com/videos/v/daily-calm-yyhd4-sgp3h'
+      recording: '5vIRN_4C_kE',
+      additionalLink: '5vIRN_4C_kE'
     },
     {
       date: '2024-09-30',
@@ -62,7 +75,7 @@ export default function Activities() {
       description: 'Partnership with 73 Holdings focusing on wealth management for professional athletes. Featured Garrick Jones (former NFL/CFL player, CEO of 73 Holdings) and Julia Valentine.',
       speakers: ['Julia Valentine', 'Garrick Jones'],
       attendees: 120,
-      recording: 'https://www.foalpha.com/videos'
+      recording: '5vIRN_4C_kE'
     },
     {
       date: '2024-10-20',
@@ -71,7 +84,7 @@ export default function Activities() {
       description: 'Hosted by Danielle Patterson (CEO of Family Office List), featuring Julia Valentine & Garrick Jones discussing comprehensive family office strategies for professional athletes.',
       speakers: ['Danielle Patterson', 'Julia Valentine', 'Garrick Jones'],
       attendees: 200,
-      recording: 'https://www.foalpha.com/videos'
+      recording: '5vIRN_4C_kE'
     },
     {
       date: '2024-09-15',
@@ -80,7 +93,7 @@ export default function Activities() {
       description: 'Deep dive into cybersecurity ROI analysis and how security investments prevent business disruption for family offices.',
       speakers: ['Julia Valentine', 'Christopher Hetner'],
       attendees: 150,
-      recording: 'https://www.foalpha.com/videos'
+      recording: '5vIRN_4C_kE'
     },
     {
       date: '2024-10-05',
@@ -89,7 +102,7 @@ export default function Activities() {
       description: 'Exploring the intersection of technology implementation and governance frameworks in modern family office operations.',
       speakers: ['Julia Valentine'],
       attendees: 180,
-      recording: 'https://www.foalpha.com/videos'
+      recording: '5vIRN_4C_kE'
     }
   ];
 
@@ -217,13 +230,13 @@ export default function Activities() {
                     )}
                   </div>
                   <div className="lg:w-auto">
-                    <a
-                      href={event.registration}
+                    <button
+                      onClick={() => openVideoModal(event.registration)}
                       className="bg-gold text-navy px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold hover:bg-navy hover:text-white transition-all duration-300 inline-flex items-center text-sm sm:text-base w-full sm:w-auto justify-center"
                     >
-                      Register Now
-                      <ExternalLink className="ml-2" size={14} />
-                    </a>
+                      Watch Preview
+                      <Play className="ml-2" size={14} />
+                    </button>
                   </div>
                 </div>
               </motion.div>
@@ -283,12 +296,13 @@ export default function Activities() {
                   <span className="text-charcoal text-xs sm:text-sm">
                     {event.attendees} attendees
                   </span>
-                  <a
-                    href={event.recording}
-                    className="text-gold hover:text-navy font-medium text-xs sm:text-sm whitespace-nowrap"
+                  <button
+                    onClick={() => openVideoModal(event.recording)}
+                    className="text-gold hover:text-navy font-medium text-xs sm:text-sm whitespace-nowrap inline-flex items-center"
                   >
-                    View Recording →
-                  </a>
+                    <Play className="mr-1" size={12} />
+                    Watch Recording
+                  </button>
                 </div>
               </motion.div>
             ))}
@@ -481,6 +495,30 @@ export default function Activities() {
           </motion.div>
         </div>
       </section>
+
+      {/* YouTube Video Modal */}
+      {isVideoModalOpen && (
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
+          <div className="relative bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            <button
+              onClick={closeVideoModal}
+              className="absolute top-4 right-4 z-10 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
+            >
+              <X size={20} />
+            </button>
+            <div className="aspect-video">
+              <iframe
+                src={`https://www.youtube.com/embed/${currentVideoId}?autoplay=1&rel=0`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -5,10 +5,25 @@ import { BarChart3, Shield, TrendingUp, Activity } from 'lucide-react';
 import SecurityDashboard from './SecurityDashboard';
 import PortfolioRadarChart from './PortfolioRadarChart';
 import InteractiveMetrics from './InteractiveMetrics';
+import AssetAllocationDonut from './AssetAllocationDonut';
+import RiskMetricsGauge from './RiskMetricsGauge';
+import PortfolioComposition from './PortfolioComposition';
+import ClientGrowthTimeline from './ClientGrowthTimeline';
+import ComplianceMatrix from './ComplianceMatrix';
+import GeographicDistribution from './GeographicDistribution';
+import MarketTrendChart from './MarketTrendChart';
+import NetworkTopology from './NetworkTopology';
+import CybersecurityThreatMap from './CybersecurityThreatMap';
+import ESGScorecard from './ESGScorecard';
+import ClientSatisfactionMetrics from './ClientSatisfactionMetrics';
+import TechnologyInnovationDashboard from './TechnologyInnovationDashboard';
+import OperationalEfficiencyMatrix from './OperationalEfficiencyMatrix';
+import MarketSentimentAnalysis from './MarketSentimentAnalysis';
+import BusinessIntelligenceDashboard from './BusinessIntelligenceDashboard';
 
 export default function ChartsSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-offWhite">
+    <section id="charts-section" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-offWhite">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -72,9 +87,8 @@ export default function ChartsSection() {
           <InteractiveMetrics />
         </motion.div>
 
-        {/* Charts Grid */}
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 sm:gap-12">
-          {/* Portfolio Radar Chart */}
+        {/* First Row - Portfolio Analytics */}
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 sm:gap-12 mb-12">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -84,16 +98,172 @@ export default function ChartsSection() {
             <PortfolioRadarChart />
           </motion.div>
 
-          {/* Security Dashboard */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <SecurityDashboard />
+            <AssetAllocationDonut />
           </motion.div>
         </div>
+
+        {/* Second Row - Security & Risk */}
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 sm:gap-12 mb-12">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <SecurityDashboard />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <RiskMetricsGauge />
+          </motion.div>
+        </div>
+
+        {/* Third Row - Performance Analysis */}
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 sm:gap-12 mb-12">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <PortfolioComposition />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.9 }}
+            viewport={{ once: true }}
+          >
+            <MarketTrendChart />
+          </motion.div>
+        </div>
+
+        {/* Fourth Row - Growth & Compliance */}
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 sm:gap-12 mb-12">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
+            viewport={{ once: true }}
+          >
+            <ClientGrowthTimeline />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 1.1 }}
+            viewport={{ once: true }}
+          >
+            <ComplianceMatrix />
+          </motion.div>
+        </div>
+
+        {/* Fifth Row - Global & Network */}
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 sm:gap-12 mb-12">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 1.2 }}
+            viewport={{ once: true }}
+          >
+            <GeographicDistribution />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 1.3 }}
+            viewport={{ once: true }}
+          >
+            <NetworkTopology />
+          </motion.div>
+        </div>
+
+        {/* Sixth Row - Cybersecurity & ESG */}
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 sm:gap-12 mb-12">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 1.4 }}
+            viewport={{ once: true }}
+          >
+            <CybersecurityThreatMap />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 1.5 }}
+            viewport={{ once: true }}
+          >
+            <ESGScorecard />
+          </motion.div>
+        </div>
+
+        {/* Seventh Row - Client Satisfaction & Technology */}
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 sm:gap-12 mb-12">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 1.6 }}
+            viewport={{ once: true }}
+          >
+            <ClientSatisfactionMetrics />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 1.7 }}
+            viewport={{ once: true }}
+          >
+            <TechnologyInnovationDashboard />
+          </motion.div>
+        </div>
+
+        {/* Eighth Row - Operations & Market Analysis */}
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 sm:gap-12 mb-12">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 1.8 }}
+            viewport={{ once: true }}
+          >
+            <OperationalEfficiencyMatrix />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 1.9 }}
+            viewport={{ once: true }}
+          >
+            <MarketSentimentAnalysis />
+          </motion.div>
+        </div>
+
+        {/* Ninth Row - Business Intelligence */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 2.0 }}
+          viewport={{ once: true }}
+        >
+          <BusinessIntelligenceDashboard />
+        </motion.div>
 
         {/* Additional Insights */}
         <motion.div
