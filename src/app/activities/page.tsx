@@ -25,7 +25,7 @@ export default function Activities() {
       description: 'Comprehensive cybersecurity training covering ROI analysis, technology implementation, governance frameworks, and reputation management for family offices.',
       time: '2:00 PM EST',
       speakers: ['Julia Valentine', 'Christopher Hetner'],
-      registration: '5vIRN_4C_kE'
+      registration: 'ke5w1EeRHIk'
     },
     {
       date: '2025-02-20',
@@ -34,7 +34,7 @@ export default function Activities() {
       description: 'Comprehensive program teaching wealth management, family office creation, and financial fitness specifically designed for professional athletes.',
       time: '3:00 PM EST',
       speakers: ['Julia Valentine', 'Garrick Jones'],
-      registration: '5vIRN_4C_kE'
+      registration: 'k8T3QGuNqbE'
     },
     {
       date: '2025-03-15',
@@ -43,7 +43,7 @@ export default function Activities() {
       description: 'Helping athletes prepare for life after sports with comprehensive wealth transition and legacy planning strategies.',
       time: '2:00 PM EST',
       speakers: ['Garrick Jones', 'Julia Valentine'],
-      registration: '5vIRN_4C_kE'
+      registration: 'vpgHmNJjD5o'
     }
   ];
 
@@ -55,8 +55,8 @@ export default function Activities() {
       description: 'In this webinar you\'ll learn how to measure the return on your investment in cybersecurity, and how to get the most out of your cybersecurity program for years to come. Hear from our CEO, Julia Valentine and our experts, Anthony Carter and Mike Wilkes, in this power hour webinar.',
       speakers: ['Julia Valentine', 'Anthony Carter', 'Mike Wilkes'],
       attendees: 175,
-      recording: '5vIRN_4C_kE',
-      additionalLink: '5vIRN_4C_kE'
+      recording: '1Q5JWi1gK3A',
+      additionalLink: '1Q5JWi1gK3A'
     },
     {
       date: '2024-09-30',
@@ -65,8 +65,8 @@ export default function Activities() {
       description: 'Julia Valentine brings over 20 years of experience at top-tier firms, including JPMorgan, D.E. Shaw, and Mousse Partners, a prominent family office. She has also served as COO and CTO of a family office with $1.5 billion ...',
       speakers: ['Danielle Patterson', 'Julia Valentine'],
       attendees: 220,
-      recording: '5vIRN_4C_kE',
-      additionalLink: '5vIRN_4C_kE'
+      recording: 'ke5w1EeRHIk',
+      additionalLink: 'ke5w1EeRHIk'
     },
     {
       date: '2024-09-30',
@@ -75,7 +75,7 @@ export default function Activities() {
       description: 'Partnership with 73 Holdings focusing on wealth management for professional athletes. Featured Garrick Jones (former NFL/CFL player, CEO of 73 Holdings) and Julia Valentine.',
       speakers: ['Julia Valentine', 'Garrick Jones'],
       attendees: 120,
-      recording: '5vIRN_4C_kE'
+      recording: 'k8T3QGuNqbE'
     },
     {
       date: '2024-10-20',
@@ -84,7 +84,7 @@ export default function Activities() {
       description: 'Hosted by Danielle Patterson (CEO of Family Office List), featuring Julia Valentine & Garrick Jones discussing comprehensive family office strategies for professional athletes.',
       speakers: ['Danielle Patterson', 'Julia Valentine', 'Garrick Jones'],
       attendees: 200,
-      recording: '5vIRN_4C_kE'
+      recording: 'vpgHmNJjD5o'
     },
     {
       date: '2024-09-15',
@@ -93,7 +93,7 @@ export default function Activities() {
       description: 'Deep dive into cybersecurity ROI analysis and how security investments prevent business disruption for family offices.',
       speakers: ['Julia Valentine', 'Christopher Hetner'],
       attendees: 150,
-      recording: '5vIRN_4C_kE'
+      recording: '1Q5JWi1gK3A'
     },
     {
       date: '2024-10-05',
@@ -102,7 +102,7 @@ export default function Activities() {
       description: 'Exploring the intersection of technology implementation and governance frameworks in modern family office operations.',
       speakers: ['Julia Valentine'],
       attendees: 180,
-      recording: '5vIRN_4C_kE'
+      recording: 'ke5w1EeRHIk'
     }
   ];
 

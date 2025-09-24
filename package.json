@@ -6,7 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sitemap": "next build && next export",
+    "seo-audit": "lighthouse https://familyofficealpha.io --output=html --output-path=./seo-audit.html --only-categories=seo,accessibility,best-practices,performance",
+    "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
     "chart.js": "^4.5.0",

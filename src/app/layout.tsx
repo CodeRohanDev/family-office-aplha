@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { generateMetadata as generateSEOMetadata, organizationStructuredData, websiteStructuredData } from "@/lib/seo";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,11 +15,19 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 });
 
-export const metadata: Metadata = {
-  title: "Family Office Alpha - Professional Family Office & Cybersecurity Advisory",
-  description: "Expert family office and cybersecurity advisory services for high-net-worth families and institutions.",
-  keywords: "family office, cybersecurity, advisory, wealth management, security consulting",
-};
+export const metadata: Metadata = generateSEOMetadata({
+  canonical: '/',
+  keywords: [
+    'family office services',
+    'wealth management advisory',
+    'cybersecurity consulting',
+    'private wealth management',
+    'financial security',
+    'investment advisory',
+    'risk assessment',
+    'portfolio management'
+  ]
+});
 
 export default function RootLayout({
   children,
@@ -27,6 +36,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationStructuredData),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteStructuredData),
+          }}
+        />
+      </head>
       <body className="font-inter antialiased">
         <Navigation />
         <main>{children}</main>

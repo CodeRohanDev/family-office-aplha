@@ -2,7 +2,10 @@
 
 import { Award, Target, Globe, Users, Shield, TrendingUp, CheckCircle, Star, Building, Calendar, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
-import ChartsSection from '@/components/ChartsSection';
+import MarketTrendsChart from '@/components/MarketTrendsChart';
+import RiskAnalysisChart from '@/components/RiskAnalysisChart';
+import ClientGrowthChart from '@/components/ClientGrowthChart';
+import GlobalMarketsChart from '@/components/GlobalMarketsChart';
 
 export default function CompanyProfile() {
   const stats = [
@@ -101,11 +104,34 @@ export default function CompanyProfile() {
         </div>
       </section>
 
-      {/* Charts Section */}
-      <ChartsSection />
+      {/* Market Analytics Section */}
+      <section id="market-analytics" className="py-16 sm:py-20 bg-offWhite">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-playfair text-3xl sm:text-4xl font-bold text-navy mb-4">Market Intelligence</h2>
+            <div className="w-16 h-1 bg-gold mx-auto mb-6"></div>
+            <p className="text-lg text-charcoal/80 max-w-2xl mx-auto">
+              Real-time insights driving our investment strategies and client success.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <MarketTrendsChart />
+            <RiskAnalysisChart />
+            <ClientGrowthChart />
+            <GlobalMarketsChart />
+          </div>
+        </div>
+      </section>
 
       {/* Mission & Vision */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-offWhite">
+      <section className="py-16 sm:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
