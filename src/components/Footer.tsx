@@ -42,7 +42,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-start">
                 <Mail size={16} className="mr-2 text-gold flex-shrink-0 mt-0.5" />
-                <span className="text-offWhite text-sm sm:text-base break-all">info@foalpha.com</span>
+                <span className="text-offWhite text-sm sm:text-base break-all">info@familyofficealpha.io</span>
               </div>
               <div className="flex items-center">
                 <Phone size={16} className="mr-2 text-gold flex-shrink-0" />

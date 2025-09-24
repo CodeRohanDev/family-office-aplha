@@ -140,5 +140,5 @@ Speakers include Julia Valentine and Garrick Jones (Former NFL/CFL player, CEO o
 
 **Family Office Alpha**  
 📍 27 West 60th Street, New York, NY 10023  
-📧 info@foalpha.com  
+📧 info@familyofficealpha.io  
 🌐 [Contact Us](https://www.foalpha.com/contact)  

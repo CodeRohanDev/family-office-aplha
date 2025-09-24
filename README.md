@@ -229,7 +229,7 @@ The website content is based on the Family Office Alpha company information incl
 
 **Family Office Alpha**
 - 📍 27 West 60th Street, New York, NY 10023
-- 📧 info@foalpha.com
+- 📧 info@familyofficealpha.io
 - 🌐 [Contact Us](https://www.foalpha.com/contact)
 
 ## 📄 License

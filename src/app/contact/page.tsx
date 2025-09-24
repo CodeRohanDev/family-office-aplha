@@ -192,7 +192,7 @@ export default function Contact() {
                     </div>
                     <div className="min-w-0 flex-1">
                       <h4 className="font-semibold text-navy mb-1 text-sm sm:text-base">Email</h4>
-                      <p className="text-charcoal text-sm sm:text-base break-all">info@foalpha.com</p>
+                      <p className="text-charcoal text-sm sm:text-base break-all">info@familyofficealpha.io</p>
                       <p className="text-charcoal text-xs sm:text-sm">We respond within 24 hours</p>
                     </div>
                   </div>
