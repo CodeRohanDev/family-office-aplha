@@ -1,8 +1,5 @@
 import { MetadataRoute } from 'next'
 
-// Force static generation for sitemap when using "output: export"
-export const dynamic = "force-static";
-
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://familyofficealpha.io'
   const currentDate = new Date().toISOString()
