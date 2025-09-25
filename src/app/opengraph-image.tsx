@@ -1,6 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
+export const dynamic = 'force-static'
 export const alt = 'Family Office Alpha - Professional Family Office & Cybersecurity Advisory'
 export const size = {
   width: 1200,
