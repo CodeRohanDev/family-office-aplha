@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { generateMetadata as generateSEOMetadata, organizationStructuredData, websiteStructuredData } from "@/lib/seo";
 
-const inter = Inter({
-  subsets: ["latin"],
+// Temporarily using system fonts for static export
+const inter = {
   variable: "--font-inter",
-});
+  className: "",
+};
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-});
+const playfair = {
+  variable: "--font-playfair", 
+  className: "",
+};
 
 export const metadata: Metadata = generateSEOMetadata({
   canonical: '/',
